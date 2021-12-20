@@ -14,14 +14,14 @@ def get_meta(youtube_api_key, host, url, page, header, meta, authors_meta, verbo
         pars = dict(parse.parse_qsl(parse.urlsplit(url).query))
         if 'v' not in pars:
             return meta
-        request = f"wget -S --timeout=10 --tries=3 'https://www.googleapis.com/youtube/v3/videos?id={pars['v']}&key={youtube_api_key}&part=snippet' -O {page} > {header} 2>&1"
+        request = f"wget -S --timeout=10 --tries=3 'https://www.googleapis.com/youtube/v3/videos?id={pars['v']}&key={youtube_api_key}&part=snippet' -O {page}"
         image_sizes = ['high', 'medium', 'default']
     else:
         parts = url.split("/")
         if len(parts) == 0:
             return meta
         channel_id = parts[len(parts) - 1]
-        request = f"wget -S --timeout=10 --tries=3 'https://www.googleapis.com/youtube/v3/channels?id={channel_id}&key={youtube_api_key}&part=snippet,statistics' -O {page} > {header} 2>&1"
+        request = f"wget -S --timeout=10 --tries=3 'https://www.googleapis.com/youtube/v3/channels?id={channel_id}&key={youtube_api_key}&part=snippet,statistics' -O {page}"
         image_sizes = ['default', 'medium', 'high']
 
     if read_from_files == False:

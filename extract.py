@@ -109,20 +109,3 @@ if __name__ == '__main__':
                 for i in range(0, len(links)):
                     meta, fn = process_file(config, links[i])
                     diff_file(meta, links[i], fn)
-
-        elif sys.argv[1] == "-import":
-            with open('./test_data/links_.txt') as f:
-                links = f.read().splitlines()
-                for i in range(0, len(links)):
-                    meta, fn = process_file(config, links[i])
-                    copyfile("./pages/%s.html" %
-                             fn, "./test_data/downloads/%s.html" % fn)
-                    try:
-                        copyfile("./pages/%s.txt" %
-                                 fn, "./test_data/downloads/%s.txt" % fn)
-                    except:
-                        pass
-                    with open("./test_data/downloads/%s.meta" % fn, "w") as f:
-                        f.write(normalize(meta))
-                    with open("./test_data/links.txt", "a") as f:
-                        f.write(links[i] + "\n")
