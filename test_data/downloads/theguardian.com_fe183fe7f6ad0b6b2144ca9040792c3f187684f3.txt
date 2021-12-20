@@ -1,0 +1,39 @@
+--2021-12-07 22:01:28--  https://www.theguardian.com/commentisfree/2020/mar/09/jeff-bezos-climate-crisis-taxes-california
+Resolving www.theguardian.com (www.theguardian.com)... 199.232.189.111, 2a04:4e42:6f::367
+Connecting to www.theguardian.com (www.theguardian.com)|199.232.189.111|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Connection: keep-alive
+  Content-Length: 246147
+  Content-Type: text/html; charset=UTF-8
+  ETag: W/"hash894235734140159009"
+  Link: <https://assets.guim.co.uk/>; rel=preconnect,<https://i.guim.co.uk>; rel=preconnect,<https://j.ophan.co.uk>; rel=preconnect,<https://ophan.theguardian.com>; rel=preconnect,<https://api.nextgen.guardianapps.co.uk>; rel=preconnect,<https://hits-secure.theguardian.com>; rel=preconnect,<https://interactive.guim.co.uk>; rel=preconnect,<https://phar.gu-web.net>; rel=preconnect,<https://static.theguardian.com>; rel=preconnect,<https://support.theguardian.com>; rel=preconnect
+  X-GU-Dotcomponents: true
+  Accept-Ranges: bytes
+  Date: Tue, 07 Dec 2021 21:01:28 GMT
+  Age: 740
+  Set-Cookie: GU_mvt_id=363202; expires=Mon, 07 Mar 2022 21:01:28 GMT; path=/; domain=.theguardian.com; Secure
+  X-Timer: S1638910888.337041,VS0,VE1
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy: default-src https:; script-src https: 'unsafe-inline' 'unsafe-eval' blob: 'unsafe-inline'; frame-src https: data:; style-src https: 'unsafe-inline'; img-src https: data: blob:; media-src https: data: blob:; font-src https: data:; connect-src https: wss:; child-src https: blob:; object-src 'none'; base-uri https://*.gracenote.com
+  Referrer-Policy: no-referrer-when-downgrade
+  Feature-Policy: camera 'none'; microphone 'none'; midi 'none'; geolocation 'none'
+  Permissions-Policy: camera=(), microphone=(), midi=(), geolocation=(), interest-cohort=()
+  X-GU-Edition: int
+  Cache-Control: max-age=60, stale-while-revalidate=6, stale-if-error=864000, private, no-transform
+  Vary: Accept-Encoding,User-Agent
+  Set-Cookie: GU_geo_country=AT; path=/; Secure
+Length: 246147 (240K) [text/html]
+Saving to: ‘./pages/theguardian.com_fe183fe7f6ad0b6b2144ca9040792c3f187684f3.html’
+
+     0K .......... .......... .......... .......... .......... 20% 2.68M 0s
+    50K .......... .......... .......... .......... .......... 41% 2.96M 0s
+   100K .......... .......... .......... .......... .......... 62% 14.2M 0s
+   150K .......... .......... .......... .......... .......... 83% 12.8M 0s
+   200K .......... .......... .......... ..........           100% 7.41M=0.05s
+
+2021-12-07 22:01:28 (4.96 MB/s) - ‘./pages/theguardian.com_fe183fe7f6ad0b6b2144ca9040792c3f187684f3.html’ saved [246147/246147]
+

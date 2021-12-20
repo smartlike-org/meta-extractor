@@ -1,0 +1,31 @@
+--2021-12-07 22:01:36--  https://habr.com/ru/post/503062/
+Resolving habr.com (habr.com)... 178.248.237.68
+Connecting to habr.com (habr.com)|178.248.237.68|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Server: QRATOR
+  Date: Tue, 07 Dec 2021 21:01:36 GMT
+  Content-Type: text/html; charset=utf-8
+  Content-Length: 98539
+  Connection: keep-alive
+  Keep-Alive: timeout=15
+  Vary: Accept-Encoding
+  Vary: Accept-Encoding
+  X-DNS-Prefetch-Control: off
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=15552000; includeSubDomains
+  X-Download-Options: noopen
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  ETag: W/"180eb-5kJ41xGKqyXvTco6TypYpf51hQU"
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Proxy-Cache-Status: MISS
+  X-Request-Id: f2b30a74699f1869387848d8bee5c278
+Length: 98539 (96K) [text/html]
+Saving to: ‘./pages/habr.com_5a4e7688174276ffc855f383ccb11a522a3281e9.html’
+
+     0K .......... .......... .......... .......... .......... 51%  837K 0s
+    50K .......... .......... .......... .......... ......    100%  902K=0.1s
+
+2021-12-07 22:01:36 (867 KB/s) - ‘./pages/habr.com_5a4e7688174276ffc855f383ccb11a522a3281e9.html’ saved [98539/98539]
+

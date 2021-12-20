@@ -1,0 +1,19 @@
+--2021-12-07 22:01:46--  https://www.proekt.media/investigation/gde-otravili-navalnogo/
+Resolving www.proekt.media (www.proekt.media)... 104.22.27.162, 172.67.31.24, 104.22.26.162, ...
+Connecting to www.proekt.media (www.proekt.media)|104.22.27.162|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 403 Forbidden
+  Date: Tue, 07 Dec 2021 21:01:45 GMT
+  Content-Type: text/html; charset=UTF-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: same-origin
+  Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+  Expires: Thu, 01 Jan 1970 00:00:01 GMT
+  Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+  Vary: Accept-Encoding
+  Server: cloudflare
+  CF-RAY: 6ba0b0e92a234e14-FRA
+2021-12-07 22:01:46 ERROR 403: Forbidden.
+

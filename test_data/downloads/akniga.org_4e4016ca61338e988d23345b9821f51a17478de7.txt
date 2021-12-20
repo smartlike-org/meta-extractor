@@ -1,0 +1,42 @@
+--2021-12-07 22:01:42--  https://akniga.org/strugackie-hischnye-veschi-veka
+Resolving akniga.org (akniga.org)... 138.201.72.86
+Connecting to akniga.org (akniga.org)|138.201.72.86|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 301 Moved Permanently
+  Server: nginx
+  Date: Tue, 07 Dec 2021 21:01:42 GMT
+  Content-Type: text/html; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  Set-Cookie: PHPSESSID=l83q0acjde2n5vpr1u8d8quuo0; path=/; HttpOnly
+  Expires: Thu, 19 Nov 1981 08:52:00 GMT
+  Cache-Control: no-store, no-cache, must-revalidate
+  Pragma: no-cache
+  Set-Cookie: a_ismobile=0; expires=Wed, 07-Dec-2022 21:01:42 GMT; Max-Age=31536000; path=/
+  Location: https://akniga.org/bratya-strugackie-vtoroe-nashestvie-marsian
+  Strict-Transport-Security: max-age=31536000
+Location: https://akniga.org/bratya-strugackie-vtoroe-nashestvie-marsian [following]
+--2021-12-07 22:01:42--  https://akniga.org/bratya-strugackie-vtoroe-nashestvie-marsian
+Reusing existing connection to akniga.org:443.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Server: nginx
+  Date: Tue, 07 Dec 2021 21:01:42 GMT
+  Content-Type: text/html; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  Vary: Accept-Encoding
+  Expires: Thu, 19 Nov 1981 08:52:00 GMT
+  Cache-Control: no-store, no-cache, must-revalidate
+  Pragma: no-cache
+  Strict-Transport-Security: max-age=31536000
+Length: unspecified [text/html]
+Saving to: ‘./pages/akniga.org_4e4016ca61338e988d23345b9821f51a17478de7.html’
+
+     0K .......... .......... .......... .......... .......... 1.73M
+    50K .......... .......... .......... .......... .......... 2.03M
+   100K .......... .......... .......... .......... .......... 19.5M
+   150K .......... .......... ..                               25.7M=0.06s
+
+2021-12-07 22:01:42 (3.02 MB/s) - ‘./pages/akniga.org_4e4016ca61338e988d23345b9821f51a17478de7.html’ saved [176240]
+

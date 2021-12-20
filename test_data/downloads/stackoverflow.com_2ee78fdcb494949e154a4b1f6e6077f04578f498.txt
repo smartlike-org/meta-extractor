@@ -1,0 +1,34 @@
+--2021-12-07 22:01:31--  https://stackoverflow.com/questions/14539807/convert-unicode-with-utf-8-string-as-content-to-str
+Resolving stackoverflow.com (stackoverflow.com)... 151.101.65.69, 151.101.1.69, 151.101.193.69, ...
+Connecting to stackoverflow.com (stackoverflow.com)|151.101.65.69|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Connection: keep-alive
+  cache-control: private
+  content-type: text/html; charset=utf-8
+  last-modified: Sun, 02 May 2021 13:21:02 GMT
+  strict-transport-security: max-age=15552000
+  x-frame-options: SAMEORIGIN
+  x-request-guid: 18a515c7-e5dc-4178-925a-0fa9389abaf4
+  feature-policy: microphone 'none'; speaker 'none'
+  content-security-policy: upgrade-insecure-requests; frame-ancestors 'self' https://stackexchange.com
+  Accept-Ranges: bytes
+  Date: Tue, 07 Dec 2021 21:01:31 GMT
+  Via: 1.1 varnish
+  X-Served-By: cache-muc13970-MUC
+  X-Cache: MISS
+  X-Cache-Hits: 0
+  X-Timer: S1638910891.155966,VS0,VE138
+  Vary: Fastly-SSL
+  X-DNS-Prefetch-Control: off
+  Set-Cookie: prov=e1ece4d0-c0a8-10ad-fa57-8472e607c133; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
+  transfer-encoding: chunked
+Length: unspecified [text/html]
+Saving to: ‘./pages/stackoverflow.com_2ee78fdcb494949e154a4b1f6e6077f04578f498.html’
+
+     0K .......... .......... .......... .......... ..........  200K
+    50K .......... .......... .......... .......... ..........  200K
+   100K .......... .......... .......... .......... ....        349K=0.6s
+
+2021-12-07 22:01:32 (230 KB/s) - ‘./pages/stackoverflow.com_2ee78fdcb494949e154a4b1f6e6077f04578f498.html’ saved [147813]
+

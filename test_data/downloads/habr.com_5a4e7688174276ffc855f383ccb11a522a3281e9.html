@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru" data-vue-meta="%7B%22lang%22:%7B%22ssr%22:%22ru%22%7D%7D">
+<head >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <title>Реальная стоимость жизни в Кремниевой Долине для разработчика / Хабр</title>
+  <style>
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    /* cyrillic */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveQhf6TF0.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveSBf6TF0.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveRhf6.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+  <link rel="preload" href="https://assets.habr.com/habr-web/css/chunk-vendors.961b6771.css" as="style"><link rel="preload" href="https://assets.habr.com/habr-web/js/chunk-vendors.3520ba24.js" as="script"><link rel="preload" href="https://assets.habr.com/habr-web/css/app.8769ce4b.css" as="style"><link rel="preload" href="https://assets.habr.com/habr-web/js/app.dfde8f63.js" as="script">
+  <link rel="stylesheet" href="https://assets.habr.com/habr-web/css/chunk-vendors.961b6771.css"><link rel="stylesheet" href="https://assets.habr.com/habr-web/css/app.8769ce4b.css">
+  <script>window.i18nFetch = new Promise((res, rej) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', '/js/i18n/ru-compiled.3b03adbf5ac46fc5ac3df8724bf36cc4.json');
+          xhr.responseType = 'json';
+          xhr.onload = function(e) {
+            if (this.status === 200) {
+              res({ru: xhr.response});
+            } else {
+              rej(e);
+            }
+          };
+          xhr.send();
+        });</script>
+  
+  <script data-vue-meta="ssr" type="application/ld+json" data-vmid="ldjson-schema">{"@context":"http:\/\/schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/habr.com\/ru\/post\/503062\/"},"headline":"Реальная стоимость жизни в Кремниевой Долине для разработчика","datePublished":"2020-05-21T09:01:48+03:00","dateModified":"2020-06-20T09:24:28+03:00","author":{"@type":"Person","name":"Vincent Stark"},"publisher":{"@type":"Organization","name":"Habr","logo":{"@type":"ImageObject","url":"https:\/\/habrastorage.org\/webt\/a_\/lk\/9m\/a_lk9mjkccjox-zccjrpfolmkmq.png"}},"description":"Зачем это читать? Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном. Своим фильмом, Дудь хотел поднять стартапн...","url":"https:\/\/habr.com\/ru\/post\/503062\/#post-content-body","about":["h_it_immigration","h_career","f_management"],"image":["https:\/\/habr.com\/share\/publication\/503062\/05d31075055ff7d7fcd5c542f9414a25\/","https:\/\/habrastorage.org\/webt\/zt\/z9\/ff\/ztz9ffigsrzo6-z_yzvkytfrlyo.jpeg","https:\/\/habrastorage.org\/webt\/37\/81\/mk\/3781mkxajkkf3vxov-dltaweupk.jpeg","https:\/\/habrastorage.org\/webt\/6m\/gf\/-u\/6mgf-umuvftqes86kavotbcndp0.jpeg","https:\/\/habrastorage.org\/webt\/td\/xx\/xg\/tdxxxgccvdijr4cct5yruvmve1q.jpeg","https:\/\/habrastorage.org\/webt\/uq\/92\/wk\/uq92wkrjjivw7yoxtp0gykpou7c.jpeg","https:\/\/habrastorage.org\/webt\/hc\/gz\/ll\/hcgzlllcnbl3qauqzajprdl8jro.jpeg","https:\/\/habrastorage.org\/webt\/kf\/-u\/p6\/kf-up6yivn6lrlhyb9cvoamdgqu.jpeg","https:\/\/habrastorage.org\/webt\/f8\/a4\/ud\/f8a4udqsipugt2spjp2lygkigdu.jpeg","https:\/\/habrastorage.org\/webt\/kp\/le\/9g\/kple9giz7wzepxisuu_7scui1h0.jpeg","https:\/\/habrastorage.org\/webt\/6p\/lq\/1k\/6plq1koogu7kxkhdlustxfkz_5y.jpeg","https:\/\/habrastorage.org\/webt\/hu\/k_\/f3\/huk_f3hwu9jan4ukrk7xy7opdna.jpeg","https:\/\/habrastorage.org\/webt\/kq\/x4\/do\/kqx4do3octk9de_jxikilmu4sni.jpeg"]}</script>
+  <script src="//www.googletagservices.com/tag/js/gpt.js" async></script>
+  <style>.grecaptcha-badge{visibility: hidden;}</style>
+  <meta name="habr-version" content="2.52.0">
+  
+  <meta data-vue-meta="ssr" property="fb:app_id" content="444736788986613"><meta data-vue-meta="ssr" property="fb:pages" content="472597926099084"><meta data-vue-meta="ssr" name="twitter:card" content="summary_large_image"><meta data-vue-meta="ssr" name="twitter:site" content="@habr_com"><meta data-vue-meta="ssr" property="og:site_name" content="Хабр" data-vmid="og:site_name"><meta data-vue-meta="ssr" property="og:title" content="Реальная стоимость жизни в Кремниевой Долине для разработчика" data-vmid="og:title"><meta data-vue-meta="ssr" name="twitter:title" content="Реальная стоимость жизни в Кремниевой Долине для разработчика" data-vmid="twitter:title"><meta data-vue-meta="ssr" name="aiturec:title" content="Реальная стоимость жизни в Кремниевой Долине для разработчика" data-vmid="aiturec:title"><meta data-vue-meta="ssr" name="description" content="Зачем это читать?
+Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.
+Своим фильмом, Дудь хотел поднять стартапный ажиотаж в России, но в итоге..." data-vmid="description"><meta data-vue-meta="ssr" itemprop="description" content="Зачем это читать?
+Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.
+Своим фильмом, Дудь хотел поднять стартапный ажиотаж в России, но в итоге..." data-vmid="description:itemprop"><meta data-vue-meta="ssr" property="og:description" content="Зачем это читать?
+Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.
+Своим фильмом, Дудь хотел поднять стартапный ажиотаж в России, но в итоге..." data-vmid="og:description"><meta data-vue-meta="ssr" name="twitter:description" content="Зачем это читать?
+Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.
+Своим фильмом, Дудь хотел поднять стартапный ажиотаж в России, но в итоге..." data-vmid="twitter:description"><meta data-vue-meta="ssr" property="aiturec:description" content="Зачем это читать?
+Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.
+Своим фильмом, Дудь хотел поднять стартапный ажиотаж в России, но в итоге..." data-vmid="aiturec:description"><meta data-vue-meta="ssr" itemprop="image" content="https://habrastorage.org/webt/fm/wr/pg/fmwrpgjwqtnha6wfvzfqufrpzy8.jpeg" data-vmid="image:itemprop"><meta data-vue-meta="ssr" property="og:image" content="https://habrastorage.org/webt/fm/wr/pg/fmwrpgjwqtnha6wfvzfqufrpzy8.jpeg" data-vmid="og:image"><meta data-vue-meta="ssr" property="og:image:width" content="1200" data-vmid="og:image:width"><meta data-vue-meta="ssr" property="og:image:height" content="630" data-vmid="og:image:height"><meta data-vue-meta="ssr" property="aiturec:image" content="https://habrastorage.org/webt/fm/wr/pg/fmwrpgjwqtnha6wfvzfqufrpzy8.jpeg" data-vmid="aiturec:image"><meta data-vue-meta="ssr" name="twitter:image" content="https://habrastorage.org/webt/fm/wr/pg/fmwrpgjwqtnha6wfvzfqufrpzy8.jpeg" data-vmid="twitter:image"><meta data-vue-meta="ssr" property="vk:image" content="https://habrastorage.org/webt/fm/wr/pg/fmwrpgjwqtnha6wfvzfqufrpzy8.jpeg" data-vmid="vk:image"><meta data-vue-meta="ssr" property="aiturec:item_id" content="503062" data-vmid="aiturec:item_id"><meta data-vue-meta="ssr" property="aiturec:datetime" content="2020-05-21T06:01:48.000Z" data-vmid="aiturec:datetime"><meta data-vue-meta="ssr" property="og:type" content="article" data-vmid="og:type"><meta data-vue-meta="ssr" property="og:locale" content="ru_RU" data-vmid="og:locale"><meta data-vue-meta="ssr" name="keywords" content="кремниевая долина, дудь, зарплата программиста, зарплата, калифорния, сша, америка, it-миграция">
+  <link data-vue-meta="ssr" href="https://habr.com/ru/post/503062/" rel="og:url" data-vmid="og:url"><link data-vue-meta="ssr" href="https://habr.com/ru/rss/post/503062/?fl=ru" type="application/rss+xml" title="" rel="alternate" name="rss"><link data-vue-meta="ssr" href="https://habr.com/ru/post/503062/" rel="canonical" data-vmid="canonical"><link data-vue-meta="ssr" data-vmid="hreflang"><link data-vue-meta="ssr" image_src="image" href="https://habrastorage.org/webt/fm/wr/pg/fmwrpgjwqtnha6wfvzfqufrpzy8.jpeg" data-vmid="image:href"><link data-vue-meta="ssr" rel="amphtml" href="https://habr.com/ru/amp/post/503062/">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303b44">
+  <meta name="msapplication-TileColor" content="#629FBC">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://assets.habr.com/habr-web/img/favicons/favicon-16.png"
+  >
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    sizes="32x32"
+    href="https://assets.habr.com/habr-web/img/favicons/favicon-32.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="76x76"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-76.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="120x120"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-120.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="152x152"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-152.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="180x180"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-180.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="256x256"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-256.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1136x640.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2436x1125.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1792x828.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_828x1792.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1334x750.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1242x2668.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2208x1242.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1125x2436.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1242x2208.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2732x2048.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2688x1242.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2224x1668.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_750x1334.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2048x2732.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2388x1668.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1668x2224.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_640x1136.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1668x2388.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2048x1536.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1536x2048.png"
+  >
+  <link
+    rel="mask-icon"
+    color="#77a2b6"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-120.svg"
+  >
+  <link
+    crossorigin="use-credentials"
+    href="/manifest.webmanifest"
+    rel="manifest"
+  >
+</head>
+<body>
+
+
+<div id="app" data-server-rendered="true" data-async-called="true"><div class="tm-layout__wrapper"><!----> <div></div> <!----> <header class="tm-header"><div class="tm-page-width"><div class="tm-header__container"><!----> <span class="tm-header__logo-wrap"><a href="/ru/" class="tm-header__logo tm-header__logo_ru"><svg height="16" width="16" class="tm-svg-img tm-header__icon"><title>Хабр</title> <use xlink:href="/img/habr-logo-ru.svg#logo"></use></svg></a> <span class="tm-header__beta-sign" style="display:none;">β</span></span> <div class="tm-dropdown tm-header__projects"><div class="tm-dropdown__head"><button class="tm-header__dropdown-toggle"><svg height="16" width="16" class="tm-svg-img tm-header__icon tm-header__icon_dropdown"><title>Открыть список</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#arrow-down"></use></svg></button></div> <!----></div> <a href="/ru/sandbox/start/" class="tm-header__become-author-btn">
+            Как стать автором
+          </a> <div class="tm-feature tm-header__feature tm-feature_variant-inline"><!----></div> <!----> <!----></div></div></header> <div class="tm-layout"><div class="tm-page-progress-bar"></div> <div data-menu-sticky="true" class="tm-base-layout__header tm-base-layout__header_is-sticky"><div class="tm-page-width"><div class="tm-base-layout__header-wrapper"><div class="tm-main-menu"><div class="tm-main-menu__section"><nav class="tm-main-menu__section-content"><!----> <a href="/ru/all/" class="tm-main-menu__item">
+        Все потоки
+      </a> <a href="/ru/flows/develop/" class="tm-main-menu__item">
+          Разработка
+        </a><a href="/ru/flows/admin/" class="tm-main-menu__item">
+          Администрирование
+        </a><a href="/ru/flows/design/" class="tm-main-menu__item">
+          Дизайн
+        </a><a href="/ru/flows/management/" class="tm-main-menu__item">
+          Менеджмент
+        </a><a href="/ru/flows/marketing/" class="tm-main-menu__item">
+          Маркетинг
+        </a><a href="/ru/flows/popsci/" class="tm-main-menu__item">
+          Научпоп
+        </a></nav></div></div> <div class="tm-header-user-menu tm-base-layout__user-menu"><a href="/ru/search/" class="tm-header-user-menu__item tm-header-user-menu__search"><svg height="24" width="24" class="tm-svg-img tm-header-user-menu__icon tm-header-user-menu__icon_search tm-header-user-menu__icon_dark"><title>Поиск</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#search"></use></svg></a> <!----> <!----> <!----> <div class="tm-header-user-menu__item tm-header-user-menu__user_desktop"><div class="tm-dropdown"><div class="tm-dropdown__head"><svg height="24" width="24" data-test-id="menu-toggle-guest" class="tm-svg-img tm-header-user-menu__icon"><title>Профиль</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#header-user"></use></svg> <!----></div> <!----></div> <!----></div> <!----></div></div></div></div> <!----> <div class="tm-page-width"></div> <main class="tm-layout__container"><div hl="ru" data-async-called="true" class="tm-page"><div class="tm-page-width"><!----> <div class="tm-page__wrapper"><div class="tm-page__main tm-page__main_has-sidebar"><div class="pull-down"><div class="pull-down__header" style="height:0px;"><div class="pull-down__content" style="bottom:10px;"><svg height="24" width="24" class="tm-svg-img pull-down__arrow"><title>Обновить</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#pull-arrow"></use></svg></div></div> <div class="tm-article-presenter"> <div class="tm-article-presenter__body"><div class="tm-misprint-area"><div class="tm-misprint-area__wrapper"><article class="tm-article-presenter__content tm-article-presenter__content_narrow"><div class="tm-article-presenter__header"> <div class="tm-article-snippet tm-article-presenter__snippet"><div class="tm-article-snippet__meta-container"><div class="tm-article-snippet__meta"><span class="tm-user-info tm-article-snippet__author"><a href="/ru/users/vincentstark/" title="vincentstark" class="tm-user-info__userpic"><div class="tm-entity-image"><img alt="" height="24" src="//habrastorage.org/r/w32/getpro/habr/avatars/25a/cbe/401/25acbe4015571663495da5c4a82d7b7f.png" width="24" class="tm-entity-image__pic"></div></a> <span class="tm-user-info__user"><a href="/ru/users/vincentstark/" class="tm-user-info__username">
+      vincentstark
+    </a> </span></span> <span class="tm-article-snippet__datetime-published"><time datetime="2020-05-21T06:01:48.000Z" title="2020-05-21, 09:01">21  мая  2020 в 09:01</time></span></div> <!----></div> <h1 lang="ru" class="tm-article-snippet__title tm-article-snippet__title_h1"><span>Реальная стоимость жизни в Кремниевой Долине для разработчика</span></h1> <div class="tm-article-snippet__hubs"><span class="tm-article-snippet__hubs-item"><a href="/ru/hub/it_immigration/" class="tm-article-snippet__hubs-item-link"><span>IT-эмиграция</span> <!----></a></span><span class="tm-article-snippet__hubs-item"><a href="/ru/hub/career/" class="tm-article-snippet__hubs-item-link"><span>Карьера в IT-индустрии</span> <!----></a></span></div> <!----> <!----> <!----></div></div> <!----> <div data-gallery-root="" lang="ru" class="tm-article-body"><div id="post-content-body" class="article-formatted-body article-formatted-body_version-1"><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="zachem-eto-chitat">Зачем это читать?</h2><br/>
+<p>Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.</p><br/>
+<p><a href="https://www.youtube.com/watch?v=9lO06Zxhu88" rel="nofollow">Своим фильмом</a>, Дудь хотел поднять стартапный ажиотаж в России, но в итоге возбудил всех моих товарищей гораздо больше здесь, в Silicon Valley.</p><br/>
+<p>Этот пост — расчет стоимости жизни "обычного разработчика" (не "стартапера"), который работает "<a href="https://www.linkedin.com/" rel="nofollow">на дядю</a>". Все максимально честно и подробно.</p><a name="habracut"></a><br/>
+<h2 id="skoka-skoka">Скока-скока?!</h2><br/>
+<p>Всех интересует вопрос про деньги, я знаю. С него и начну.</p><br/>
+<p>Как многие говорили до меня, высокие зарплаты в Долине компенсируются высокой стоимостью жизни. Но даже с учетом этого, работая на большую компанию можно себя неплохо ощущать и содержать семью.</p><br/>
+<p>Про "содержать семью" это важный момент — чаще всего по приезду, ваш супруг или супруга не сможет (легально) здесь работать, даже если и захочет.</p><br/>
+<h3 id="dohody">Доходы</h3><br/>
+<p>Оплата — раз в две недели, 26 раз в году. Получается, что в два месяца из 12 "зарплата" приходит три раза вместо двух.</p><br/>
+<p>Чтобы не быть голословным, вот мой последний Paycheck:</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/zt/z9/ff/ztz9ffigsrzo6-z_yzvkytfrlyo.jpeg" data-src="https://habrastorage.org/webt/zt/z9/ff/ztz9ffigsrzo6-z_yzvkytfrlyo.jpeg" data-blurred="true"/></p><br/>
+<p>Paycheck не включает в себя важный момент: RSUs (Restricted Stock Units) — те самые акции ("сток"). Акции можно оставить после получения, а можно сразу продать. Если компания публичная (торгуется на бирже), то RSUs — это чистый кеш.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/37/81/mk/3781mkxajkkf3vxov-dltaweupk.jpeg" data-src="https://habrastorage.org/webt/37/81/mk/3781mkxajkkf3vxov-dltaweupk.jpeg" data-blurred="true"/></p><br/>
+<p>Стоимость гранта меняется, в зависимости от стоимости акций. При выдаче она была одной, сегодня она такая, а завтра может быть уже другой (как это видно на скриншоте). Надежда на то, что цена акций будет расти. Но, как показывает практика, рынки непредсказуемы — и может быть все совсем наоборот.</p><br/>
+<p>Замечу, что акции выдаются поквартально, а первый грант вообще зачастую только через год. Для простоты расчетов я подразумеваю, что разница покрывается использованием кредитных карт с последующем закрытием 100% долга.</p><br/>
+<p>Также, от RSUs моя компания сразу забирает 40% в качестве налога, но потом — в зависимости от общего дохода за год — часть из этого можно вернуть.</p><br/>
+<p>Есть еще такая вещь, как 401(k) matching (пенсия), акции со скидкой (ESPP), годовой бонус (10-15%), и некоторые другие "perks", но в моем расчете я это не учитываю. На чистый ежемесячный доход это влияет не сильно.</p><br/>
+<p>Теперь вы видите, почему все работающие здесь называют свой доход "примерно"? С точностью до копейки (цента) рассчитать практически невозможно.</p><br/>
+<p>И вот какой приблизительный расчет ежемесячного дохода после налогов получился у меня:</p><br/>
+<ul>
+<li>Paycheck: $4,839.50 * 26 (выплат в году) / 12 (месяцев) = <strong>$10,485.58</strong></li>
+<li>RSUs: 1039 * 0.6 (-40%) * $184.39 (цена акций на дату вестинга) / 12 (месяцев) = <strong>$9,579.06</strong></li>
+<li>Итого: $10,485.58 + $9,610.75 = <strong>$20,064.64</strong></li>
+</ul><br/>
+<p>Та самая "двадцатка чистыми" про которую герои фильма Дудя говорили, что это "прожиточный минимум".</p><br/>
+<h3 id="rashody">Расходы</h3><br/>
+<p>Вот это договор на продление аренды 3-bedroom townhome в прекрасном районе <a href="https://www.google.com/maps/place/Redwood+Shores,+Redwood+City,+CA" rel="nofollow">Redwood Shores</a>:</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/6m/gf/-u/6mgf-umuvftqes86kavotbcndp0.jpeg" data-src="https://habrastorage.org/webt/6m/gf/-u/6mgf-umuvftqes86kavotbcndp0.jpeg" data-blurred="true"/></p><br/>
+<p>Сразу скажу — это не самый дешевый (но и не самый дорогой) вариант. Например, в San Jose <a href="https://www.zillow.com/san-jose-ca/apartments/3-_beds/paymenta_sort/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22San%20Jose%2C%20CA%22%2C%22mapBounds%22%3A%7B%22west%22%3A-122.26571279394531%2C%22east%22%3A-121.62850576269531%2C%22south%22%3A37.09590281941611%2C%22north%22%3A37.53877322417956%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A33839%2C%22regionType%22%3A6%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22mapZoom%22%3A11%2C%22filterState%22%3A%7B%22beds%22%3A%7B%22min%22%3A3%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22sort%22%3A%7B%22value%22%3A%22paymenta%22%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D" rel="nofollow">можно найти</a> жилье существенно дешевле, а где-нибудь в East Bay — еще <a href="https://www.zillow.com/fremont-ca/apartments/3-_beds/paymenta_sort/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22Fremont%2C%20CA%22%2C%22mapBounds%22%3A%7B%22west%22%3A-122.14262490060914%2C%22east%22%3A-121.82402138498414%2C%22south%22%3A37.410958301693235%2C%22north%22%3A37.631791895308034%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A11540%2C%22regionType%22%3A6%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22mapZoom%22%3A12%2C%22filterState%22%3A%7B%22beds%22%3A%7B%22min%22%3A3%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22sort%22%3A%7B%22value%22%3A%22paymenta%22%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D" rel="nofollow">немного дешевле</a>.</p><br/>
+<p>Но дом красивый:</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/td/xx/xg/tdxxxgccvdijr4cct5yruvmve1q.jpeg" data-src="https://habrastorage.org/webt/td/xx/xg/tdxxxgccvdijr4cct5yruvmve1q.jpeg" data-blurred="true"/></p><br/>
+<p>И район тоже неплохой:</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/uq/92/wk/uq92wkrjjivw7yoxtp0gykpou7c.jpeg" data-src="https://habrastorage.org/webt/uq/92/wk/uq92wkrjjivw7yoxtp0gykpou7c.jpeg" data-blurred="true"/></p><br/>
+<p>В общем, оно того стоит, я считаю. Если взять этот же дом в ипотеку, а не в рент, то ежемесячный платеж будет примерно в два раза больше.</p><br/>
+<p>Жилье — самая большая статья расхода в Долине, и самая сильно отличающаяся от других мест в США.</p><br/>
+<p>ВАЖНО: почти все жилье сдается в аренду БЕЗ мебели, но с крупной бытовой техникой: плита, холодильник, стиралка, сушилка, посудомойка.</p><br/>
+<p>Приблизительные расходы нашей семьи из 3-х человек:</p><br/>
+<ul>
+<li>Аренда дома: <strong>$4,550</strong></li>
+<li>Продукты, заказ еды и рестораны: <strong>$3,500</strong></li>
+<li>Персональные вещи и сервисы (одежда, витамины, переводы родителям, "ноготочки" супруги и т.п.): <strong>$2,050</strong></li>
+<li>Развлечения (музеи, поездки, отели, няни, подарки): <strong>$2,000</strong></li>
+<li>Два автомобиля в лиз + страховка + бензин: <strong>$1,100</strong></li>
+<li>Коммунальные платежи (электричество, газ, вода, канализация, вывоз мусора): <strong>$420</strong></li>
+<li>Мобильная связь (безлимитная, включает стоимость двух телефонов и iPad'ов): <strong>$415</strong></li>
+<li>Уборка дома (раз в неделю по $100): <strong>$400</strong></li>
+<li>Софт, фильмы, девайсы: <strong>$400</strong></li>
+<li>Хобби (книги, курсы, обучающие материалы и т.п.): <strong>$400</strong></li>
+<li>Страховка жизни и здоровья: <strong>$310</strong></li>
+<li>Школа (public school donation): <strong>$150</strong></li>
+<li>Кабельный Интернет (1Gbps down / 40Mbps up): <strong>$75</strong></li>
+</ul><br/>
+<h3 id="itogo">Итого</h3><br/>
+<ul>
+<li>Доходы: <strong>$20,064.64</strong></li>
+<li>Расходы: <strong>$15,770.00</strong></li>
+<li>Остаток: <strong>$4,294.64</strong></li>
+</ul><br/>
+<p>Большой ли у меня доход по сравнению с другими инженерами Долины? Если сравнивать работающих в Гуглах и Фейсбуках, то средний. </p><br/>
+<p>Для стартапа — большой, но в стартапе обычно работа более интересная и есть (хоть и мизерный) шанс стать миллионером, если компания "выстрелит".</p><br/>
+<p>Комфортно ли жить на такой доход? Не шикуешь особо, но нормально. Как вы видели, даже получается что-то откладывать.</p><br/>
+<p>Есть ли инженеры (не менеджеры), зарабатывающие по $1 млн. в год, например в Гугле? Есть. Но их мало. Реально ли стать таким инженером? Очень долго и сложно, но реально.</p><br/>
+<h2 id="plohoe-v-doline">Плохое в Долине</h2><br/>
+<p>Что здесь не нравится?</p><br/>
+<ul>
+<li>Ограниченная культурная жизнь, особенно по сравнению с Москвой или Питером.</li>
+<li>Дорогие дома. Дом или таунхаус с 3 спальнями в нормальном районе будет <a href="https://www.redfin.com/city/17420/CA/San-Jose/filter/dyos-shape-id=41434014,property-type=house+townhouse+multifamily,min-beds=3,min-baths=2" rel="nofollow">от $1 миллиона</a>. Но это все-равно не "$5-10 миллионов" как в фильме Дудя.</li>
+<li>Много весьма плохих школ. "Плохих" — с драками, наркотиками, вот этим всем. Школа привязывается к району. Соответственно, где более-менее хорошие школы, дома более дорогие.</li>
+<li>Очень дорогие и при этом весьма среднего качества сервисы: от водопроводчиков до нянь, от покраски волос до детских садов.</li>
+<li>Старая инфраструктура. Все разваливается. Дороги в плохом состоянии, некоторые светофоры не работают, многие дома старые и потрепанные, гигабитный Интернет дорог и далеко не везде доступен, покрытие сотовой связи среднее — есть зоны не только без мобильного Интернета, но и вообще без связи.</li>
+<li>Высокий уровень преступности. <a href="https://varlamov.ru/1922903.html" rel="nofollow">Агрессивные и опасные бомжи</a> в центрах городов Долины, особенно в Сан-Франциско и Сан-Хосе.</li>
+<li>Русскоговорящая община пока не такая сильная, как индусская или китайская. Можно столкнуться с клановостью. Работать в подобной "монокультурной" команде очень сложно.</li>
+<li>Грязновато. Мусор на дорогах, фасады домов во многих местах так себе.</li>
+<li>Плохие Government Services. DMV (Department of Motor Vehicles) Калифорнии — это клоака еще та. Вспоминаются лучшие традиции советской бюрократии и отношения к клиенту.</li>
+<li>Безумные пробки в рабочие дни, утром и вечером. Много народу везде: в транспорте, в магазинах, ресторанах, музеях.</li>
+<li>Летом <a href="https://en.wikipedia.org/wiki/2018_California_wildfires" rel="nofollow">иногда что-то сильно горит</a> рядом, и становится <a href="https://www.theguardian.com/us-news/2018/nov/12/california-wildfires-bay-area-smoke-haze-air-quality-pollution" rel="nofollow">тяжело дышать</a>.</li>
+</ul><br/>
+<h2 id="horoshee-v-doline">Хорошее в Долине</h2><br/>
+<p>Если все так плохо, то зачем сюда ехать?</p><br/>
+<p>Южная природа и великолепная погода: после мягкой осени сразу наступает весна. Не слишком жарко, и не слишком холодно.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/hc/gz/ll/hcgzlllcnbl3qauqzajprdl8jro.jpeg" data-src="https://habrastorage.org/webt/hc/gz/ll/hcgzlllcnbl3qauqzajprdl8jro.jpeg" data-blurred="true"/></p><br/>
+<p>Рядом океан — купаться прохладно, но очень красиво.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/kf/-u/p6/kf-up6yivn6lrlhyb9cvoamdgqu.jpeg" data-src="https://habrastorage.org/webt/kf/-u/p6/kf-up6yivn6lrlhyb9cvoamdgqu.jpeg" data-blurred="true"/></p><br/>
+<p>Всемирно известные винные регионы Napa и Sonoma всего в 1 часе езды.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/f8/a4/ud/f8a4udqsipugt2spjp2lygkigdu.jpeg" data-src="https://habrastorage.org/webt/f8/a4/ud/f8a4udqsipugt2spjp2lygkigdu.jpeg" data-blurred="true"/></p><br/>
+<p>4 часа езды до Тахо, где красивые озера и горнолыжный курорт.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/kp/le/9g/kple9giz7wzepxisuu_7scui1h0.jpeg" data-src="https://habrastorage.org/webt/kp/le/9g/kple9giz7wzepxisuu_7scui1h0.jpeg" data-blurred="true"/></p><br/>
+<p>7 часов езды до Лос-Анджелеса, где Голливуд и развлечений побольше, чем в Сан-Франциско.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/6p/lq/1k/6plq1koogu7kxkhdlustxfkz_5y.jpeg" data-src="https://habrastorage.org/webt/6p/lq/1k/6plq1koogu7kxkhdlustxfkz_5y.jpeg" data-blurred="true"/></p><br/>
+<p>9 часов езды до Лас-Вегаса, где развлечений вообще много.</p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/hu/k_/f3/huk_f3hwu9jan4ukrk7xy7opdna.jpeg" data-src="https://habrastorage.org/webt/hu/k_/f3/huk_f3hwu9jan4ukrk7xy7opdna.jpeg" data-blurred="true"/></p><br/>
+<p>Ну и прочие прелести:</p><br/>
+<ul>
+<li>Очень много работы для IT-специалистов. Компании соревнуются и переманивают сотрудников друг у друга.</li>
+<li>Возможность поработать на всемирно известную IT-компанию, а потом когда надоест — перейти в другую, или в небольшой стартап (и сразу директором, например).</li>
+<li>Атмосфера инноваций, технического прогресса и предпринимательства. Даже кто работает на большую компанию, обычно что-то делает "на стороне".</li>
+<li>Благодаря RSUs, есть возможность копить деньги и взять дом в ипотеку — даже с учетом безумных цен — через 2-5 лет.</li>
+<li>… ну и конечно-же, ощущение собственной опупенности, что живешь в "самом центре IT"!</li>
+</ul><br/>
+<h2 id="i">И?</h2><br/>
+<p>Если вдруг это все вас впечатлило и вы хотите знать больше, посмотрите мой следующий пост "<a href="https://habr.com/en/post/503642/">Как устроиться в LinkedIn, Facebook, Google в Кремниевой Долине</a>".</p><br/>
+<p>P.S. Все прекрасные фото для этой статьи сделаны замечательной <a href="https://www.instagram.com/marastark/" rel="nofollow">@marastark</a></p><br/>
+<p><img src="https://habrastorage.org/r/w780q1/webt/kq/x4/do/kqx4do3octk9de_jxikilmu4sni.jpeg" data-src="https://habrastorage.org/webt/kq/x4/do/kqx4do3octk9de_jxikilmu4sni.jpeg" data-blurred="true"/></p></div></div> <!----> <!----></div> <div class="tm-article-presenter__meta"><div class="tm-separated-list tm-article-presenter__meta-list"><span class="tm-separated-list__title">Теги:</span> <ul class="tm-separated-list__list"><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%BA%D1%80%D0%B5%D0%BC%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0%D1%8F%20%D0%B4%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0%5D" class="tm-tags-list__link">кремниевая долина</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B4%D1%83%D0%B4%D1%8C%5D" class="tm-tags-list__link">дудь</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B7%D0%B0%D1%80%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0%5D" class="tm-tags-list__link">зарплата программиста</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B7%D0%B0%D1%80%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%5D" class="tm-tags-list__link">зарплата</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%BA%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F%5D" class="tm-tags-list__link">калифорния</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D1%81%D1%88%D0%B0%5D" class="tm-tags-list__link">сша</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%5D" class="tm-tags-list__link">америка</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Bit-%D0%BC%D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F%5D" class="tm-tags-list__link">it-миграция</a></li></ul></div> <div class="tm-separated-list tm-article-presenter__meta-list"><span class="tm-separated-list__title">Хабы:</span> <ul class="tm-separated-list__list"><li class="tm-separated-list__item"><a href="/ru/hub/it_immigration/" class="tm-hubs-list__link">
+    IT-эмиграция
+  </a></li><li class="tm-separated-list__item"><a href="/ru/hub/career/" class="tm-hubs-list__link">
+    Карьера в IT-индустрии
+  </a></li></ul></div></div></article></div> <!----></div> <div class="tm-article-sticky-panel"><div class="tm-data-icons tm-article-sticky-panel__icons"><div class="tm-article-rating tm-data-icons__item"><div class="tm-votes-meter tm-article-rating__votes-switcher"><svg height="24" width="24" class="tm-svg-img tm-votes-meter__icon tm-votes-meter__icon_appearance-article"><title>Всего голосов 278: ↑269 и ↓9</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#counter-rating"></use></svg> <span title="Всего голосов 278: ↑269 и ↓9" class="tm-votes-meter__value tm-votes-meter__value_positive tm-votes-meter__value_appearance-article tm-votes-meter__value_rating">+260</span></div> <DIV class="v-portal" style="display:none;"></DIV></div> <!----> <span title="Количество просмотров" class="tm-icon-counter tm-data-icons__item"><svg height="24" width="24" class="tm-svg-img tm-icon-counter__icon"><title>Просмотры</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#counter-views"></use></svg> <span class="tm-icon-counter__value">146K</span></span> <button title="Добавить в закладки" type="button" class="bookmarks-button tm-data-icons__item"><span title="Добавить в закладки" class="tm-svg-icon__wrapper bookmarks-button__icon"><svg height="24" width="24" class="tm-svg-img tm-svg-icon"><title>Добавить в закладки</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#counter-favorite"></use></svg></span> <span title="Количество пользователей, добавивших публикацию в закладки" class="bookmarks-button__counter">
+    386
+  </span></button> <!----> <div title="Поделиться" class="tm-sharing tm-data-icons__item"><button type="button" class="tm-sharing__button"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="tm-sharing__icon"><path fill="currentColor" d="M13.8 13.8V18l7.2-6.6L13.8 5v3.9C5 8.9 3 18.6 3 18.6c2.5-4.4 6-4.8 10.8-4.8z"></path></svg></button> <DIV class="v-portal" style="display:none;"></DIV></div> <DIV class="v-portal" style="display:none;"></DIV></div> </div></div> <!----> <!----> <div class="tm-article-presenter__footer"><div class="tm-article-blocks"><!----> <section class="tm-block tm-block_spacing-bottom"><!----> <div class="tm-block__body tm-block__body_variant-balanced"><div class="tm-article-author"> <div class="tm-user-card tm-article-author__user-card tm-user-card_variant-article"><div class="tm-user-card__info-container"><div class="tm-user-card__header"><div class="tm-user-card__header-data"><a href="/ru/users/vincentstark/" class="tm-user-card__userpic tm-user-card__userpic_size-40"><div class="tm-entity-image"><img alt="" src="//habrastorage.org/getpro/habr/avatars/25a/cbe/401/25acbe4015571663495da5c4a82d7b7f.png" class="tm-entity-image__pic"></div></a> <div class="tm-user-card__meta"><div title=" 48 голосов " class="tm-karma tm-user-card__karma"><div class="tm-karma__votes tm-karma__votes_positive">
+    40
+  </div> <div class="tm-karma__text">
+    Карма
+  </div></div> <div title="Рейтинг пользователя" class="tm-rating tm-user-card__rating"><div class="tm-rating__header"> <div class="tm-rating__counter">0</div></div> <div class="tm-rating__text">
+    Рейтинг
+  </div></div></div></div></div> <div class="tm-user-card__info tm-user-card__info_variant-article"><div class="tm-user-card__title tm-user-card__title_variant-article"><span class="tm-user-card__name tm-user-card__name_variant-article">Vincent Stark</span> <a href="/ru/users/vincentstark/" class="tm-user-card__nickname tm-user-card__nickname_variant-article">
+          @vincentstark
+        </a> <!----></div> <p class="tm-user-card__short-info tm-user-card__short-info_variant-article">Engineering Manager</p></div></div> <div class="tm-user-card__buttons tm-user-card__buttons_variant-article"><!----> <!----> <!----> <!----> <!----></div></div> <div class="tm-article-author__user-contacts"><a href="https://vstark.net" rel="noopener" target="_blank" class="tm-article-author__contact">
+      Сайт
+    </a><a href="https://www.linkedin.com/in/vincentstark/" rel="noopener" target="_blank" class="tm-article-author__contact">
+      Сайт
+    </a></div></div> <DIV class="v-portal" style="display:none;"></DIV></div> <!----></section> <div class="tm-article-blocks__comments"><div class="tm-article-page-comments"><div class="tm-article-comments-counter-link tm-article-comments-counter-button"><a href="/ru/post/503062/comments/" class="tm-article-comments-counter-link__link tm-article-comments-counter-link__link_button-style"><svg height="24" width="24" class="tm-svg-img tm-article-comments-counter-link__icon tm-article-comments-counter-link__icon_contrasted"><title>Комментарии</title> <use xlink:href="/img/megazord-v24.4a410f80.svg#counter-comments"></use></svg> <span class="tm-article-comments-counter-link__value tm-article-comments-counter-link__value_contrasted">
+       Комментарии 900 
+    </span></a> <!----></div></div></div> <div class="tm-ad-banner__container tm-page-article__banner"><!----> <div id="articleBottomBanner" class="tm-ad-banner"></div></div> <!----> <!----> <!----> <!----> </div></div></div></div></div> <div class="tm-page__sidebar"><div class="tm-layout-sidebar"><div class="tm-layout-sidebar__ads tm-layout-sidebar__ads_initial"><div class="tm-ad-banner__container tm-layout-sidebar__banner"><!----> <div id="sidebarBanner" class="tm-ad-banner"></div></div></div> <div class="tm-sexy-sidebar tm-sexy-sidebar_initial" style="margin-top:0px;"><!----> <!----></div></div></div></div></div></div></main> <!----></div> <div class="tm-footer-menu"><div class="tm-page-width"><div class="tm-footer-menu__container"><div class="tm-footer-menu__block"><h3 class="tm-footer-menu__block-title">
+          Ваш аккаунт
+        </h3> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="/kek/v1/auth/habrahabr/?back=/ru/post/503062/&amp;hl=ru" rel="nofollow" target="_self">
+                Войти
+              </a></li><li class="tm-footer-menu__list-item"><a href="/kek/v1/auth/habrahabr-register/?back=/ru/post/503062/&amp;hl=ru" rel="nofollow" target="_self">
+                Регистрация
+              </a></li></ul></div></div><div class="tm-footer-menu__block"><h3 class="tm-footer-menu__block-title">
+          Разделы
+        </h3> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="/ru/" class="footer-menu__item-link router-link-active">
+                Публикации
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/news/" class="footer-menu__item-link">
+                Новости
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/hubs/" class="footer-menu__item-link">
+                Хабы
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/companies/" class="footer-menu__item-link">
+                Компании
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/users/" class="footer-menu__item-link">
+                Авторы
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/sandbox/" class="footer-menu__item-link">
+                Песочница
+              </a></li></ul></div></div><div class="tm-footer-menu__block"><h3 class="tm-footer-menu__block-title">
+          Информация
+        </h3> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="/ru/docs/help/" class="footer-menu__item-link">
+                Устройство сайта
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/docs/authors/codex/" class="footer-menu__item-link">
+                Для авторов
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/docs/companies/corpblogs/" class="footer-menu__item-link">
+                Для компаний
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/docs/docs/transparency/" class="footer-menu__item-link">
+                Документы
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://account.habr.com/info/agreement" target="_blank">
+                Соглашение
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://account.habr.com/info/confidential/" target="_blank">
+                Конфиденциальность
+              </a></li></ul></div></div><div class="tm-footer-menu__block"><h3 class="tm-footer-menu__block-title">
+          Услуги
+        </h3> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="https://docs.google.com/presentation/d/e/2PACX-1vQLwRfQmXibiUlWaRg-BAc38s7oM3lJiaPju7qmdJsp8ysIvZ_G-Npem0njJLMozE2bPHMpDqiI5hhy/pub?start=false&amp;loop=false&amp;delayms=60000&amp;slide=id.g91a03369cd_4_297" target="_blank">
+                Реклама
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://habrastorage.org/storage/stuff/habr/service_price.pdf" target="_blank">
+                Тарифы
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://docs.google.com/presentation/d/e/2PACX-1vQJJds8-Di7BQSP_guHxICN7woVYoN5NP_22ra-BIo4bqnTT9FR6fB-Ku2P0AoRpX0Ds-LRkDeAoD8F/pub?start=false&amp;loop=false&amp;delayms=60000" target="_blank">
+                Контент
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://tmtm.timepad.ru/" target="_blank">
+                Семинары
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/megaprojects/" class="footer-menu__item-link">
+                Мегапроекты
+              </a></li></ul></div></div></div></div></div> <div class="tm-footer"><div class="tm-page-width"><div class="tm-footer__container"><!----> <div class="tm-footer__social"><a href="https://www.facebook.com/habrahabr.ru" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Facebook</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-facebook"></use></svg></a><a href="https://twitter.com/habr_com" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Twitter</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-twitter"></use></svg></a><a href="https://vk.com/habr" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>VK</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-vkontakte"></use></svg></a><a href="https://telegram.me/habr_com" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Telegram</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-telegram"></use></svg></a><a href="https://www.youtube.com/channel/UCd_sTwKqVrweTt4oAKY5y4w" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Youtube</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-youtube"></use></svg></a><a href="https://zen.yandex.ru/habr" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Яндекс Дзен</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-zen"></use></svg></a></div> <DIV class="v-portal" style="display:none;"></DIV> <button class="tm-footer__link"><!---->
+        Настройка языка
+      </button> <a href="/ru/about" class="tm-footer__link">
+        О сайте
+      </a> <a href="/ru/feedback/" class="tm-footer__link">
+        Техническая поддержка
+      </a> <!----> <a href="/berserk-mode-nope" class="tm-footer__link">
+        Вернуться на старую версию
+      </a> <div class="tm-footer-copyright"><span class="tm-copyright"><span class="tm-copyright__years">© 2006–2021 </span> <span class="tm-copyright__name">«<a href="https://company.habr.com/" rel="noopener" target="_blank" class="tm-copyright__link">Habr</a>»</span></span></div></div></div></div> <!----> <!----></div> <div class="vue-portal-target"></div></div>
+<script>window.__INITIAL_STATE__={"adblock":{"hasAcceptableAdsFilter":false,"hasAdblock":false},"articlesList":{"articlesList":{"503062":{"id":"503062","timePublished":"2020-05-21T06:01:48+00:00","isCorporative":false,"lang":"ru","titleHtml":"Реальная стоимость жизни в Кремниевой Долине для разработчика","leadData":{"textHtml":"\u003Ch2 id=\"zachem-eto-chitat\"\u003EЗачем это читать?\u003C\u002Fh2\u003E\u003Cbr\u003E\r\n\u003Cp\u003EВсем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\u003Cp\u003E\u003Ca href=\"https:\u002F\u002Fwww.youtube.com\u002Fwatch?v=9lO06Zxhu88\" rel=\"nofollow\"\u003EСвоим фильмом\u003C\u002Fa\u003E, Дудь хотел поднять стартапный ажиотаж в России, но в итоге возбудил всех моих товарищей гораздо больше здесь, в Silicon Valley.\u003C\u002Fp\u003E\u003Cbr\u003E\r\n\u003Cp\u003EЭтот пост — расчет стоимости жизни &quot;обычного разработчика&quot; (не &quot;стартапера&quot;), который работает &quot;\u003Ca href=\"https:\u002F\u002Fwww.linkedin.com\u002F\" rel=\"nofollow\"\u003Eна дядю\u003C\u002Fa\u003E&quot;. Все максимально честно и подробно.\u003C\u002Fp\u003E","imageUrl":null,"buttonTextHtml":"Читать дальше &rarr;","image":null},"editorVersion":"1.0","postType":"article","postLabels":[],"author":{"scoreStats":{"score":40,"votesCount":48},"rating":0,"relatedData":null,"contacts":[{"title":"Сайт","url":"https:\u002F\u002Fvstark.net","value":"https:\u002F\u002Fvstark.net"},{"title":"Сайт","url":"https:\u002F\u002Fwww.linkedin.com\u002Fin\u002Fvincentstark\u002F","value":"https:\u002F\u002Fwww.linkedin.com\u002Fin\u002Fvincentstark\u002F"}],"authorContacts":[{"title":"Сайт","url":"https:\u002F\u002Fvstark.net","value":"https:\u002F\u002Fvstark.net"},{"title":"Сайт","url":"https:\u002F\u002Fwww.linkedin.com\u002Fin\u002Fvincentstark\u002F","value":"https:\u002F\u002Fwww.linkedin.com\u002Fin\u002Fvincentstark\u002F"}],"paymentDetails":{"paymentYandexMoney":null,"paymentPayPalMe":null,"paymentWebmoney":null},"id":"197979","alias":"vincentstark","fullname":"Vincent Stark","avatarUrl":"\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Favatars\u002F25a\u002Fcbe\u002F401\u002F25acbe4015571663495da5c4a82d7b7f.png","speciality":"Engineering Manager"},"statistics":{"commentsCount":900,"favoritesCount":386,"readingCount":145973,"score":260,"votesCount":278},"hubs":[{"relatedData":null,"id":"20734","alias":"it_immigration","type":"collective","title":"IT-эмиграция","titleHtml":"IT-эмиграция","isProfiled":false},{"relatedData":null,"id":"20740","alias":"career","type":"collective","title":"Карьера в IT-индустрии","titleHtml":"Карьера в IT-индустрии","isProfiled":false}],"flows":[{"id":"3","alias":"management","title":"Менеджмент"}],"relatedData":null,"textHtml":"\u003Cdiv xmlns=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxhtml\"\u003E\u003Ch2 id=\"zachem-eto-chitat\"\u003EЗачем это читать?\u003C\u002Fh2\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EВсем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Ca href=\"https:\u002F\u002Fwww.youtube.com\u002Fwatch?v=9lO06Zxhu88\" rel=\"nofollow\"\u003EСвоим фильмом\u003C\u002Fa\u003E, Дудь хотел поднять стартапный ажиотаж в России, но в итоге возбудил всех моих товарищей гораздо больше здесь, в Silicon Valley.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЭтот пост — расчет стоимости жизни \"обычного разработчика\" (не \"стартапера\"), который работает \"\u003Ca href=\"https:\u002F\u002Fwww.linkedin.com\u002F\" rel=\"nofollow\"\u003Eна дядю\u003C\u002Fa\u003E\". Все максимально честно и подробно.\u003C\u002Fp\u003E\u003Ca name=\"habracut\"\u003E\u003C\u002Fa\u003E\u003Cbr\u002F\u003E\r\n\u003Ch2 id=\"skoka-skoka\"\u003EСкока-скока?!\u003C\u002Fh2\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EВсех интересует вопрос про деньги, я знаю. С него и начну.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EКак многие говорили до меня, высокие зарплаты в Долине компенсируются высокой стоимостью жизни. Но даже с учетом этого, работая на большую компанию можно себя неплохо ощущать и содержать семью.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EПро \"содержать семью\" это важный момент — чаще всего по приезду, ваш супруг или супруга не сможет (легально) здесь работать, даже если и захочет.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Ch3 id=\"dohody\"\u003EДоходы\u003C\u002Fh3\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EОплата — раз в две недели, 26 раз в году. Получается, что в два месяца из 12 \"зарплата\" приходит три раза вместо двух.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЧтобы не быть голословным, вот мой последний Paycheck:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fzt\u002Fz9\u002Fff\u002Fztz9ffigsrzo6-z_yzvkytfrlyo.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fzt\u002Fz9\u002Fff\u002Fztz9ffigsrzo6-z_yzvkytfrlyo.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EPaycheck не включает в себя важный момент: RSUs (Restricted Stock Units) — те самые акции (\"сток\"). Акции можно оставить после получения, а можно сразу продать. Если компания публичная (торгуется на бирже), то RSUs — это чистый кеш.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002F37\u002F81\u002Fmk\u002F3781mkxajkkf3vxov-dltaweupk.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002F37\u002F81\u002Fmk\u002F3781mkxajkkf3vxov-dltaweupk.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EСтоимость гранта меняется, в зависимости от стоимости акций. При выдаче она была одной, сегодня она такая, а завтра может быть уже другой (как это видно на скриншоте). Надежда на то, что цена акций будет расти. Но, как показывает практика, рынки непредсказуемы — и может быть все совсем наоборот.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЗамечу, что акции выдаются поквартально, а первый грант вообще зачастую только через год. Для простоты расчетов я подразумеваю, что разница покрывается использованием кредитных карт с последующем закрытием 100% долга.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EТакже, от RSUs моя компания сразу забирает 40% в качестве налога, но потом — в зависимости от общего дохода за год — часть из этого можно вернуть.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЕсть еще такая вещь, как 401(k) matching (пенсия), акции со скидкой (ESPP), годовой бонус (10-15%), и некоторые другие \"perks\", но в моем расчете я это не учитываю. На чистый ежемесячный доход это влияет не сильно.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EТеперь вы видите, почему все работающие здесь называют свой доход \"примерно\"? С точностью до копейки (цента) рассчитать практически невозможно.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EИ вот какой приблизительный расчет ежемесячного дохода после налогов получился у меня:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cul\u003E\r\n\u003Cli\u003EPaycheck: $4,839.50 * 26 (выплат в году) \u002F 12 (месяцев) = \u003Cstrong\u003E$10,485.58\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003ERSUs: 1039 * 0.6 (-40%) * $184.39 (цена акций на дату вестинга) \u002F 12 (месяцев) = \u003Cstrong\u003E$9,579.06\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EИтого: $10,485.58 + $9,610.75 = \u003Cstrong\u003E$20,064.64\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003C\u002Ful\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EТа самая \"двадцатка чистыми\" про которую герои фильма Дудя говорили, что это \"прожиточный минимум\".\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Ch3 id=\"rashody\"\u003EРасходы\u003C\u002Fh3\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EВот это договор на продление аренды 3-bedroom townhome в прекрасном районе \u003Ca href=\"https:\u002F\u002Fwww.google.com\u002Fmaps\u002Fplace\u002FRedwood+Shores,+Redwood+City,+CA\" rel=\"nofollow\"\u003ERedwood Shores\u003C\u002Fa\u003E:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002F6m\u002Fgf\u002F-u\u002F6mgf-umuvftqes86kavotbcndp0.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002F6m\u002Fgf\u002F-u\u002F6mgf-umuvftqes86kavotbcndp0.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EСразу скажу — это не самый дешевый (но и не самый дорогой) вариант. Например, в San Jose \u003Ca href=\"https:\u002F\u002Fwww.zillow.com\u002Fsan-jose-ca\u002Fapartments\u002F3-_beds\u002Fpaymenta_sort\u002F?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22San%20Jose%2C%20CA%22%2C%22mapBounds%22%3A%7B%22west%22%3A-122.26571279394531%2C%22east%22%3A-121.62850576269531%2C%22south%22%3A37.09590281941611%2C%22north%22%3A37.53877322417956%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A33839%2C%22regionType%22%3A6%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22mapZoom%22%3A11%2C%22filterState%22%3A%7B%22beds%22%3A%7B%22min%22%3A3%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22sort%22%3A%7B%22value%22%3A%22paymenta%22%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D\" rel=\"nofollow\"\u003Eможно найти\u003C\u002Fa\u003E жилье существенно дешевле, а где-нибудь в East Bay — еще \u003Ca href=\"https:\u002F\u002Fwww.zillow.com\u002Ffremont-ca\u002Fapartments\u002F3-_beds\u002Fpaymenta_sort\u002F?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22Fremont%2C%20CA%22%2C%22mapBounds%22%3A%7B%22west%22%3A-122.14262490060914%2C%22east%22%3A-121.82402138498414%2C%22south%22%3A37.410958301693235%2C%22north%22%3A37.631791895308034%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A11540%2C%22regionType%22%3A6%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22mapZoom%22%3A12%2C%22filterState%22%3A%7B%22beds%22%3A%7B%22min%22%3A3%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22sort%22%3A%7B%22value%22%3A%22paymenta%22%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D\" rel=\"nofollow\"\u003Eнемного дешевле\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EНо дом красивый:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Ftd\u002Fxx\u002Fxg\u002Ftdxxxgccvdijr4cct5yruvmve1q.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Ftd\u002Fxx\u002Fxg\u002Ftdxxxgccvdijr4cct5yruvmve1q.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EИ район тоже неплохой:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fuq\u002F92\u002Fwk\u002Fuq92wkrjjivw7yoxtp0gykpou7c.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fuq\u002F92\u002Fwk\u002Fuq92wkrjjivw7yoxtp0gykpou7c.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EВ общем, оно того стоит, я считаю. Если взять этот же дом в ипотеку, а не в рент, то ежемесячный платеж будет примерно в два раза больше.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЖилье — самая большая статья расхода в Долине, и самая сильно отличающаяся от других мест в США.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EВАЖНО: почти все жилье сдается в аренду БЕЗ мебели, но с крупной бытовой техникой: плита, холодильник, стиралка, сушилка, посудомойка.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EПриблизительные расходы нашей семьи из 3-х человек:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cul\u003E\r\n\u003Cli\u003EАренда дома: \u003Cstrong\u003E$4,550\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EПродукты, заказ еды и рестораны: \u003Cstrong\u003E$3,500\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EПерсональные вещи и сервисы (одежда, витамины, переводы родителям, \"ноготочки\" супруги и т.п.): \u003Cstrong\u003E$2,050\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EРазвлечения (музеи, поездки, отели, няни, подарки): \u003Cstrong\u003E$2,000\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EДва автомобиля в лиз + страховка + бензин: \u003Cstrong\u003E$1,100\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EКоммунальные платежи (электричество, газ, вода, канализация, вывоз мусора): \u003Cstrong\u003E$420\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EМобильная связь (безлимитная, включает стоимость двух телефонов и iPad'ов): \u003Cstrong\u003E$415\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EУборка дома (раз в неделю по $100): \u003Cstrong\u003E$400\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EСофт, фильмы, девайсы: \u003Cstrong\u003E$400\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EХобби (книги, курсы, обучающие материалы и т.п.): \u003Cstrong\u003E$400\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EСтраховка жизни и здоровья: \u003Cstrong\u003E$310\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EШкола (public school donation): \u003Cstrong\u003E$150\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EКабельный Интернет (1Gbps down \u002F 40Mbps up): \u003Cstrong\u003E$75\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003C\u002Ful\u003E\u003Cbr\u002F\u003E\r\n\u003Ch3 id=\"itogo\"\u003EИтого\u003C\u002Fh3\u003E\u003Cbr\u002F\u003E\r\n\u003Cul\u003E\r\n\u003Cli\u003EДоходы: \u003Cstrong\u003E$20,064.64\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EРасходы: \u003Cstrong\u003E$15,770.00\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003Cli\u003EОстаток: \u003Cstrong\u003E$4,294.64\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\r\n\u003C\u002Ful\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EБольшой ли у меня доход по сравнению с другими инженерами Долины? Если сравнивать работающих в Гуглах и Фейсбуках, то средний. \u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EДля стартапа — большой, но в стартапе обычно работа более интересная и есть (хоть и мизерный) шанс стать миллионером, если компания \"выстрелит\".\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EКомфортно ли жить на такой доход? Не шикуешь особо, но нормально. Как вы видели, даже получается что-то откладывать.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЕсть ли инженеры (не менеджеры), зарабатывающие по $1 млн. в год, например в Гугле? Есть. Но их мало. Реально ли стать таким инженером? Очень долго и сложно, но реально.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Ch2 id=\"plohoe-v-doline\"\u003EПлохое в Долине\u003C\u002Fh2\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЧто здесь не нравится?\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cul\u003E\r\n\u003Cli\u003EОграниченная культурная жизнь, особенно по сравнению с Москвой или Питером.\u003C\u002Fli\u003E\r\n\u003Cli\u003EДорогие дома. Дом или таунхаус с 3 спальнями в нормальном районе будет \u003Ca href=\"https:\u002F\u002Fwww.redfin.com\u002Fcity\u002F17420\u002FCA\u002FSan-Jose\u002Ffilter\u002Fdyos-shape-id=41434014,property-type=house+townhouse+multifamily,min-beds=3,min-baths=2\" rel=\"nofollow\"\u003Eот $1 миллиона\u003C\u002Fa\u003E. Но это все-равно не \"$5-10 миллионов\" как в фильме Дудя.\u003C\u002Fli\u003E\r\n\u003Cli\u003EМного весьма плохих школ. \"Плохих\" — с драками, наркотиками, вот этим всем. Школа привязывается к району. Соответственно, где более-менее хорошие школы, дома более дорогие.\u003C\u002Fli\u003E\r\n\u003Cli\u003EОчень дорогие и при этом весьма среднего качества сервисы: от водопроводчиков до нянь, от покраски волос до детских садов.\u003C\u002Fli\u003E\r\n\u003Cli\u003EСтарая инфраструктура. Все разваливается. Дороги в плохом состоянии, некоторые светофоры не работают, многие дома старые и потрепанные, гигабитный Интернет дорог и далеко не везде доступен, покрытие сотовой связи среднее — есть зоны не только без мобильного Интернета, но и вообще без связи.\u003C\u002Fli\u003E\r\n\u003Cli\u003EВысокий уровень преступности. \u003Ca href=\"https:\u002F\u002Fvarlamov.ru\u002F1922903.html\" rel=\"nofollow\"\u003EАгрессивные и опасные бомжи\u003C\u002Fa\u003E в центрах городов Долины, особенно в Сан-Франциско и Сан-Хосе.\u003C\u002Fli\u003E\r\n\u003Cli\u003EРусскоговорящая община пока не такая сильная, как индусская или китайская. Можно столкнуться с клановостью. Работать в подобной \"монокультурной\" команде очень сложно.\u003C\u002Fli\u003E\r\n\u003Cli\u003EГрязновато. Мусор на дорогах, фасады домов во многих местах так себе.\u003C\u002Fli\u003E\r\n\u003Cli\u003EПлохие Government Services. DMV (Department of Motor Vehicles) Калифорнии — это клоака еще та. Вспоминаются лучшие традиции советской бюрократии и отношения к клиенту.\u003C\u002Fli\u003E\r\n\u003Cli\u003EБезумные пробки в рабочие дни, утром и вечером. Много народу везде: в транспорте, в магазинах, ресторанах, музеях.\u003C\u002Fli\u003E\r\n\u003Cli\u003EЛетом \u003Ca href=\"https:\u002F\u002Fen.wikipedia.org\u002Fwiki\u002F2018_California_wildfires\" rel=\"nofollow\"\u003Eиногда что-то сильно горит\u003C\u002Fa\u003E рядом, и становится \u003Ca href=\"https:\u002F\u002Fwww.theguardian.com\u002Fus-news\u002F2018\u002Fnov\u002F12\u002Fcalifornia-wildfires-bay-area-smoke-haze-air-quality-pollution\" rel=\"nofollow\"\u003Eтяжело дышать\u003C\u002Fa\u003E.\u003C\u002Fli\u003E\r\n\u003C\u002Ful\u003E\u003Cbr\u002F\u003E\r\n\u003Ch2 id=\"horoshee-v-doline\"\u003EХорошее в Долине\u003C\u002Fh2\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЕсли все так плохо, то зачем сюда ехать?\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЮжная природа и великолепная погода: после мягкой осени сразу наступает весна. Не слишком жарко, и не слишком холодно.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fhc\u002Fgz\u002Fll\u002Fhcgzlllcnbl3qauqzajprdl8jro.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fhc\u002Fgz\u002Fll\u002Fhcgzlllcnbl3qauqzajprdl8jro.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EРядом океан — купаться прохладно, но очень красиво.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fkf\u002F-u\u002Fp6\u002Fkf-up6yivn6lrlhyb9cvoamdgqu.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fkf\u002F-u\u002Fp6\u002Fkf-up6yivn6lrlhyb9cvoamdgqu.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EВсемирно известные винные регионы Napa и Sonoma всего в 1 часе езды.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Ff8\u002Fa4\u002Fud\u002Ff8a4udqsipugt2spjp2lygkigdu.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Ff8\u002Fa4\u002Fud\u002Ff8a4udqsipugt2spjp2lygkigdu.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E4 часа езды до Тахо, где красивые озера и горнолыжный курорт.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fkp\u002Fle\u002F9g\u002Fkple9giz7wzepxisuu_7scui1h0.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fkp\u002Fle\u002F9g\u002Fkple9giz7wzepxisuu_7scui1h0.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E7 часов езды до Лос-Анджелеса, где Голливуд и развлечений побольше, чем в Сан-Франциско.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002F6p\u002Flq\u002F1k\u002F6plq1koogu7kxkhdlustxfkz_5y.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002F6p\u002Flq\u002F1k\u002F6plq1koogu7kxkhdlustxfkz_5y.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E9 часов езды до Лас-Вегаса, где развлечений вообще много.\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fhu\u002Fk_\u002Ff3\u002Fhuk_f3hwu9jan4ukrk7xy7opdna.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fhu\u002Fk_\u002Ff3\u002Fhuk_f3hwu9jan4ukrk7xy7opdna.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EНу и прочие прелести:\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cul\u003E\r\n\u003Cli\u003EОчень много работы для IT-специалистов. Компании соревнуются и переманивают сотрудников друг у друга.\u003C\u002Fli\u003E\r\n\u003Cli\u003EВозможность поработать на всемирно известную IT-компанию, а потом когда надоест — перейти в другую, или в небольшой стартап (и сразу директором, например).\u003C\u002Fli\u003E\r\n\u003Cli\u003EАтмосфера инноваций, технического прогресса и предпринимательства. Даже кто работает на большую компанию, обычно что-то делает \"на стороне\".\u003C\u002Fli\u003E\r\n\u003Cli\u003EБлагодаря RSUs, есть возможность копить деньги и взять дом в ипотеку — даже с учетом безумных цен — через 2-5 лет.\u003C\u002Fli\u003E\r\n\u003Cli\u003E… ну и конечно-же, ощущение собственной опупенности, что живешь в \"самом центре IT\"!\u003C\u002Fli\u003E\r\n\u003C\u002Ful\u003E\u003Cbr\u002F\u003E\r\n\u003Ch2 id=\"i\"\u003EИ?\u003C\u002Fh2\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EЕсли вдруг это все вас впечатлило и вы хотите знать больше, посмотрите мой следующий пост \"\u003Ca href=\"https:\u002F\u002Fhabr.com\u002Fen\u002Fpost\u002F503642\u002F\"\u003EКак устроиться в LinkedIn, Facebook, Google в Кремниевой Долине\u003C\u002Fa\u003E\".\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003EP.S. Все прекрасные фото для этой статьи сделаны замечательной \u003Ca href=\"https:\u002F\u002Fwww.instagram.com\u002Fmarastark\u002F\" rel=\"nofollow\"\u003E@marastark\u003C\u002Fa\u003E\u003C\u002Fp\u003E\u003Cbr\u002F\u003E\r\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw780q1\u002Fwebt\u002Fkq\u002Fx4\u002Fdo\u002Fkqx4do3octk9de_jxikilmu4sni.jpeg\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fkq\u002Fx4\u002Fdo\u002Fkqx4do3octk9de_jxikilmu4sni.jpeg\" data-blurred=\"true\"\u002F\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E","tags":[{"titleHtml":"кремниевая долина"},{"titleHtml":"дудь"},{"titleHtml":"зарплата программиста"},{"titleHtml":"зарплата"},{"titleHtml":"калифорния"},{"titleHtml":"сша"},{"titleHtml":"америка"},{"titleHtml":"it-миграция"}],"metadata":{"stylesUrls":[],"scriptUrls":[],"shareImageUrl":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Ffm\u002Fwr\u002Fpg\u002Ffmwrpgjwqtnha6wfvzfqufrpzy8.jpeg","shareImageWidth":1200,"shareImageHeight":630,"vkShareImageUrl":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Ffm\u002Fwr\u002Fpg\u002Ffmwrpgjwqtnha6wfvzfqufrpzy8.jpeg","schemaJsonLd":"{\"@context\":\"http:\\\u002F\\\u002Fschema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https:\\\u002F\\\u002Fhabr.com\\\u002Fru\\\u002Fpost\\\u002F503062\\\u002F\"},\"headline\":\"Реальная стоимость жизни в Кремниевой Долине для разработчика\",\"datePublished\":\"2020-05-21T09:01:48+03:00\",\"dateModified\":\"2020-06-20T09:24:28+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Vincent Stark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Habr\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fa_\\\u002Flk\\\u002F9m\\\u002Fa_lk9mjkccjox-zccjrpfolmkmq.png\"}},\"description\":\"Зачем это читать? Всем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном. Своим фильмом, Дудь хотел поднять стартапн...\",\"url\":\"https:\\\u002F\\\u002Fhabr.com\\\u002Fru\\\u002Fpost\\\u002F503062\\\u002F#post-content-body\",\"about\":[\"h_it_immigration\",\"h_career\",\"f_management\"],\"image\":[\"https:\\\u002F\\\u002Fhabr.com\\\u002Fshare\\\u002Fpublication\\\u002F503062\\\u002F05d31075055ff7d7fcd5c542f9414a25\\\u002F\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fzt\\\u002Fz9\\\u002Fff\\\u002Fztz9ffigsrzo6-z_yzvkytfrlyo.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002F37\\\u002F81\\\u002Fmk\\\u002F3781mkxajkkf3vxov-dltaweupk.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002F6m\\\u002Fgf\\\u002F-u\\\u002F6mgf-umuvftqes86kavotbcndp0.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Ftd\\\u002Fxx\\\u002Fxg\\\u002Ftdxxxgccvdijr4cct5yruvmve1q.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fuq\\\u002F92\\\u002Fwk\\\u002Fuq92wkrjjivw7yoxtp0gykpou7c.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fhc\\\u002Fgz\\\u002Fll\\\u002Fhcgzlllcnbl3qauqzajprdl8jro.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fkf\\\u002F-u\\\u002Fp6\\\u002Fkf-up6yivn6lrlhyb9cvoamdgqu.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Ff8\\\u002Fa4\\\u002Fud\\\u002Ff8a4udqsipugt2spjp2lygkigdu.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fkp\\\u002Fle\\\u002F9g\\\u002Fkple9giz7wzepxisuu_7scui1h0.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002F6p\\\u002Flq\\\u002F1k\\\u002F6plq1koogu7kxkhdlustxfkz_5y.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fhu\\\u002Fk_\\\u002Ff3\\\u002Fhuk_f3hwu9jan4ukrk7xy7opdna.jpeg\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fkq\\\u002Fx4\\\u002Fdo\\\u002Fkqx4do3octk9de_jxikilmu4sni.jpeg\"]}","metaDescription":"Зачем это читать?\r\nВсем привет! Меня зовут Винсент, и я с 2018 года живу в Кремниевой Долине со своей супругой и сыном.\r\nСвоим фильмом, Дудь хотел поднять стартапный ажиотаж в России, но в итоге...","mainImageUrl":null,"amp":true},"polls":[],"commentsEnabled":true,"rulesRemindEnabled":false,"votesEnabled":true,"status":"published","plannedPublishTime":null,"checked":null,"isEditorial":false}},"articlesIds":{},"isLoading":false,"pagesCount":{},"route":{},"reasonsList":null,"view":"cards","lastVisitedRoute":{},"ssrCommentsArticleIds":[""],"karma":{}},"authorContribution":{"authors":{}},"betaTest":{"currentAnnouncement":null,"announcements":{},"announcementCards":null,"announcementComments":{},"announcementCommentThreads":{},"announcementCommentingStatuses":{},"archivedList":[]},"authorStatistics":{"articleRefs":{},"articleIds":{},"pagesCount":{},"route":{},"viewsCount":[],"maxStatsCount":{}},"career":{"seoLandings":[],"hubs":"it_immigration,career"},"comments":{"articleComments":{},"searchCommentsResults":null,"previewComment":null,"pagesCount":null,"commentAccess":{},"scrollParents":{},"pageArticleComments":{"lastViewedComment":0,"postId":null,"lastCommentTimestamp":"","moderated":[],"moderatedIds":[],"commentRoute":""}},"companies":{"companyRefs":{},"companyIds":{},"companyTopIds":{},"pagesCount":{},"companyProfiles":{},"companiesCategories":[],"companiesCategoriesTotalCount":0,"companiesWidgets":{},"companiesWorkers":{},"companiesFans":{},"route":{},"isLoading":false,"companyWorkersLoading":false,"companyFansLoading":false,"vacancies":{}},"companiesContribution":{"hubs":{},"flows":{},"companyRefs":{}},"companyHubsContribution":{"contributionRefs":{"hubRefs":{},"hubIds":{}}},"conversation":{"messages":[],"respondent":null,"isLoadMore":false},"conversations":{"conversations":[],"unreadCount":0,"pagesCount":0,"isLoadMore":false},"desktopState":{"desktopFl":null,"desktopHl":null,"isChecked":false,"isLoginDemanded":false},"dfp":{"slotsDict":{}},"docs":{"menu":{},"articles":{},"mainMenu":[],"loading":{"main":false,"dropdown":false,"article":false}},"feature":{"isProbablyVisible":"true"},"flows":{"flows":[{"alias":"develop","id":1,"route":{"name":"FLOW_PAGE","params":{"flowName":"develop"}}},{"alias":"admin","id":6,"route":{"name":"FLOW_PAGE","params":{"flowName":"admin"}}},{"alias":"design","id":2,"route":{"name":"FLOW_PAGE","params":{"flowName":"design"}}},{"alias":"management","id":3,"route":{"name":"FLOW_PAGE","params":{"flowName":"management"}}},{"alias":"marketing","id":4,"route":{"name":"FLOW_PAGE","params":{"flowName":"marketing"}}},{"alias":"popsci","id":7,"route":{"name":"FLOW_PAGE","params":{"flowName":"popsci"}}}]},"global":{"isPwa":false,"device":"desktop","isHabrCom":true},"hubs":{"hubRefs":{},"hubIds":{},"pagesCount":{},"isLoading":false,"route":{}},"hubsBlock":{"hubRefs":{},"hubIds":{}},"i18n":{"fl":"ru","hl":"ru"},"info":{"infoPage":{},"isLoading":true},"location":{"urlStruct":{"protocol":null,"slashes":null,"auth":null,"host":null,"port":null,"hostname":null,"hash":null,"search":null,"query":{},"pathname":null,"path":null,"href":""},"searchQuery":null},"me":{"user":null,"ppgDemanded":false,"karmaResetInfo":{"canReincarnate":null,"wasReincarnated":null,"currentScore":null},"notes":null},"mostReadingList":{"mostReadingListIds":[],"mostReadingListRefs":null,"promoPost":null},"pinnedPost":{"pinnedPost":null},"ppa":{"articles":{},"card":null,"transactions":null,"totalTransactions":null,"isAccessible":null},"projectsBlocks":{"activeBlocks":{}},"pullRefresh":{"shouldRefresh":false},"sandbox":{"articleIds":[],"articleRefs":{},"pagesCount":null,"route":{},"lastVisitedRoute":{},"isLoading":false},"settingsOther":{"inputs":{"uiLang":{"errors":[],"ref":null,"value":""},"articlesLangEnglish":{"errors":[],"ref":null,"value":false},"articlesLangRussian":{"errors":[],"ref":null,"value":false},"agreement":{"errors":[],"ref":null,"value":false},"email":{"errors":[],"ref":null,"value":true},"digest":{"errors":[],"ref":null,"value":true}}},"similarList":{"similarListIds":[],"similarListRefs":null},"ssr":{"error":null,"isDataLoaded":false,"isDataLoading":false,"isHydrationFailed":false,"isServer":false},"userHubsContribution":{"contributionRefs":{"hubRefs":{},"hubIds":{}}},"userInvites":{"availableInvites":0,"usedInvitesIds":[],"usedInvitesRefs":{},"usedInvitesPagesCount":0,"unusedInvitesIds":[],"unusedInvitesRefs":{},"unusedInvitesPagesCount":0},"users":{"authorRefs":{},"authorIds":{},"pagesCount":{},"authorProfiles":{},"userHubs":{},"userInvitations":{},"authorFollowers":{},"authorFollowed":{},"userSpecialization":{},"karmaStats":[],"statistics":null,"isLoading":false,"authorFollowersLoading":false,"authorFollowedLoading":false,"userHubsLoading":false,"userInvitationsLoading":false,"route":{}},"viewport":{"prevScrollY":{},"scrollY":0,"width":0},"tracker":{"items":{},"pagesCache":{},"markedViewedSilently":{},"markedRead":{},"unreadCounters":{"applications":null,"system":null,"mentions":null,"subscribers":null,"posts_and_comments":null},"unviewedCounters":{"applications":null,"system":null,"mentions":null,"subscribers":null,"posts_and_comments":null}}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script>
+<script src="https://assets.habr.com/habr-web/js/chunk-vendors.3520ba24.js" defer></script><script src="https://assets.habr.com/habr-web/js/app.dfde8f63.js" defer></script>
+
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    </script>
+  
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(24049213, "init", {
+      defer:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:false,
+    });
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/24049213" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  
+    <script type="text/javascript">
+      window.addEventListener('load', function () {
+        setTimeout(() => {
+          const img = new Image();
+          img.src = 'https://vk.com/rtrg?p=VK-RTRG-421343-57vKE';
+        }, 0);
+      });
+    </script>
+  
+<script src="/js/ads.js" onload="window['zhY4i4nJ9K'] = true"></script>
+</body>
+</html>

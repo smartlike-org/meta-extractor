@@ -1,0 +1,21 @@
+{
+    "author": "wong2#stackoverflow.com",
+    "authorAvatar": "",
+    "authorDescription": "",
+    "authorHome": "",
+    "authorTitle": "wong2",
+    "confidence": 0,
+    "country": "",
+    "creator": "",
+    "description": "I'm using pyquery to parse a page: dom = PyQuery('http://zh.wikipedia.org/w/index.php', {'title': 'CSS', 'printable': 'yes', 'variant': 'zh-cn'}) content = dom('#mw-content-text &gt; p').eq(0).tex...",
+    "icon": "https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196",
+    "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+    "language": "en",
+    "pub_date": 0,
+    "site_name": "Stack Overflow",
+    "status": "ok",
+    "subscriber_count": 0,
+    "tags": [],
+    "text": "",
+    "title": "Convert unicode with utf-8 string as content to str"
+}

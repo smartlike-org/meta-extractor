@@ -1,0 +1,39 @@
+--2021-12-07 22:01:29--  https://liliputing.com/2020/03/intel-sort-of-unveils-a-core-i7-10810u-comet-lake-processor.html
+Resolving liliputing.com (liliputing.com)... 172.67.71.109, 104.26.15.172, 104.26.14.172, ...
+Connecting to liliputing.com (liliputing.com)|172.67.71.109|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Date: Tue, 07 Dec 2021 21:01:29 GMT
+  Content-Type: text/html; charset=UTF-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  CF-Ray: 6ba0b0843f845b9e-FRA
+  Age: 10214
+  Cache-Control: public, max-age=14400
+  Expires: Mon, 06 Dec 2021 20:14:33 GMT
+  Last-Modified: Mon, 06 Dec 2021 19:14:33 GMT
+  Link: <https://liliputing.com/wp-json/>; rel="https://api.w.org/", <https://liliputing.com/wp-json/wp/v2/posts/127252>; rel="alternate"; type="application/json", <https://liliputing.com/?p=127252>; rel=shortlink
+  Vary: Accept-Encoding,User-Agent
+  CF-Cache-Status: HIT
+  cf-apo-via: tcache
+  cf-edge-cache: cache,platform=wordpress
+  Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+  Pragma: public
+  Referrer-Policy: 
+  WPX: 1
+  X-Powered-By: PHP/7.4.25
+  X-Turbo-Charged-By: LiteSpeed
+  Report-To: {"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=XnXaW%2FmXjEyhyC4D4495WpBDpINk0FzZS3E9ZhEINMrTAQETZ4T3SzZpVTwXHz%2Fx6ZA8OKLC8FcbKC5PI%2BXoX%2F2JPOHHZI3No4rDxNd9ajYmXKUIr7rl0nHvqGxRAudl"}],"group":"cf-nel","max_age":604800}
+  NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+  Server: cloudflare
+Length: unspecified [text/html]
+Saving to: ‘./pages/liliputing.com_70fc2be1979d5da97f1e3c772e54f2f22ea7e64f.html’
+
+     0K .......... .......... .......... .......... .......... 18.7M
+    50K .......... .......... .......... .......... .......... 1.99M
+   100K .......... .......... .......... .......... .......... 2.52M
+   150K .......... .......... .......... .......... .......... 20.2M
+   200K .......... .....                                       32.1M=0.05s
+
+2021-12-07 22:01:30 (4.26 MB/s) - ‘./pages/liliputing.com_70fc2be1979d5da97f1e3c772e54f2f22ea7e64f.html’ saved [220595]
+

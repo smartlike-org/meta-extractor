@@ -1,0 +1,1421 @@
+
+<!DOCTYPE html>
+<html>
+<!--[if IE 6]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]> <html class="ie7"> <![endif]-->
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PV2DVS');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript" src="/Scripts/mobile.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="application-name" content="AnandTech" />
+    <meta name="google-site-verification" content="QejUZTJaqCr781DA0W_JNGjf4wS2xyffL3ohvIuRESc" />
+    <meta property="article:publisher" content="https://www.facebook.com/AnandTech" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/content/images/podcast_a_huge.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for AnandTech.com" href="/rss/" />
+
+    <title>Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute</title>                                                                            
+     <link href="/Content/atfonts.css" rel="stylesheet" type="text/css">
+    
+
+    <!--[if IE]><style type="text/css">.pie {behavior:url(/Content/PIE.htc);}</style><![endif]-->
+    <link href="/Content/css?v=813oG_8nNyCZXz7kVAe5eS_3v4I3z_2YsaGf_j29ZEg1" rel="stylesheet"/>
+
+<link href="/Content/resp?v=bLpsGHlbt2J0jFe7q4kOjMR6XTWKxEGuyW8fHKDd5HM1" rel="stylesheet"/>
+    <!--[if lt IE 9]>
+        <link type="text/css" href="/content/ie8.css" rel="stylesheet" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2pre/html5shiv.js"></script>
+    <![endif]-->
+    <script src="/bundles/jquery?v=guGiAVIp0f1T2TxJO-1NYkUT4F2gOxZwD3D5fOxH8tI1"></script>
+
+    <script src="/bundles/javascript?v=3zoMUnHQHQfKEAEU_MI-Vwh0i7NhmCdIOW4S7phdnJo1"></script>
+
+    
+    <script type='text/javascript' src="/Scripts/dynamic.js"></script>
+
+    <script type="text/javascript">
+        var tmntag = tmntag || {};
+        tmntag.cmd = tmntag.cmd || [];
+        (function() {
+            var tmnhead = document.createElement('script');
+            tmnhead.async = true;
+            tmnhead.type = 'text/javascript';
+            tmnhead.src = ('https:'==document.location.protocol?'https:':'http:')+'//ads.servebom.com/tmnhead.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(tmnhead, node);
+        })();
+        tmntag.cmd.push(function () {
+            if (screenContext != 'mobile') {
+                tmntag.placement('2002');
+            } else {
+                tmntag.placement('2012');
+            }
+                tmntag.target({ "ccat1": "servers" });
+            tmntag.target({ "ctype": "article" });
+                tmntag.target({ "kw": "servers,cpus,cloud-computing,amazon,aws,neoverse-n1,graviton2" });
+
+            tmntag.start();
+        });
+    </script>
+
+    
+        <link rel="canonical" href="https://www.anandtech.com/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd" />
+            <link rel="shortlink" href="https://www.anandtech.com/show/15578" />
+        <meta property="og:title" content="Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.anandtech.com/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd" />
+    <meta property="og:image" content="https://images.anandtech.com/doci/15578/car_678x452.jpg" />
+    <meta name="author" content="Andrei Frumusanu" />
+    <meta name="twitter:card" content="fail" />
+
+    <script type="text/javascript">
+
+        var loggedIn = false;
+        var isRoot = false;
+    </script>
+    <script src="/bundles/comments?v=4dsDdpYDBE_hkYPqV3fRU23zZmeXjfy10FIyxvSlyEk1"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('a.icAddComment').click(DoTopPost);
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV2DVS"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Begin comScore Tag -->
+    <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "6035753" });
+        (function () {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <noscript>
+        <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6035753&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+    <header class="header">
+        <div class="header_top">
+            <div class="header_ad" id="header_ad">
+                <script type="text/javascript">
+                    if (screenContext != 'mobile') {
+                      tmntag.cmd.push(function () { tmntag.adTag('header_ad', false); });
+                    }
+                </script>
+            </div>
+            <div class="logo">
+                <a href="/">
+                    <img src="/Content/images/logo2.png" alt="" />
+                </a>
+            </div>
+            <div class="header_top_right">
+                <div class="search_area">
+                    <form action="/SearchResults" method="get">
+                        <div class="search">
+                            <input name="q" type="text" class="search_field">
+                            <input name="" type="submit" class="search_btn" value="search">
+                            <div class="clear"></div>
+                        </div>
+                        <div class="login">
+                                <span id="loginHeader" style="display: none;">
+                                    Welcome <a href="/Account/Details"><b><span id="loginUser"></span></b></a>
+                                    <a href="/Account/Logout?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Log out</a>
+                                </span>
+                                <span id="logoutHeader">
+                                    <a id="loginTop" href="/Account/Login?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Login</a>
+                                    <a href="/Account/Register?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Register</a>
+                                </span>
+                        </div>
+                        <div class="clear"></div>
+                    </form>
+                </div>
+
+                    <div class="header_right_btm">
+                        <span>
+                            <a href="http://www.twitter.com/AnandTech">
+                                <img src="/Content/images/icon-twitter.png" alt="" />
+                            </a>
+                            <a href="http://www.facebook.com/AnandTech/">
+                                <img src="/Content/images/icon-facebook.png" alt="" />
+                            </a>
+                            <a href="/rss/">
+                                <img src="/Content/images/icon-rss.png" alt="" />
+                            </a>
+                        </span>
+
+                        <ul>
+                            <li><a href="/home/about/">ABOUT</a></li>
+                            <li><a href="/bench/">BENCH</a></li>
+                            <li><a href="http://forums.anandtech.com">FORUMS</a></li>
+                            <li><a href="/tag/podcast">PODCAST</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+            </div>
+            <div class=" clrflt"></div>
+        </div>
+
+        <div class="header_top_resp">
+            <div class="logo_resp">
+                <a href="/"><img src="/Content/images/logo_resp.png" alt="" /></a>
+
+            </div>
+            
+            <div class="header_top_resp_right">
+
+                <a class="search_icon" href="#"></a>
+                <div class="drop_down_search">
+                    <span class="blk"></span>
+                    <form action="/SearchResults" method="get">
+                        <div class="search">
+                            <input name="q" type="text" class="search_field">
+                            <input name="" type="submit" class="search_btn" value="search">
+                            <div class="clear"></div>
+                        </div>
+                    </form>
+                </div>
+                <a class="home" href="#"></a>
+                <div class="drop_down_home ">
+                    <span class="blk"></span>
+                    <a href="/home/about/">ABOUT</a>
+                    <a href="/bench/">BENCH</a>
+                    <a href="http://forums.anandtech.com">FORUMS</a>
+                    <a href="/tag/podcast">PODCAST</a>
+                    <a id="loginTopMobile" href="/Account/Login">LOGIN</a>
+                    <a href="/Account/Register">REGISTER</a>
+                </div>
+                <a class="nav_icon show_resp2" href="#"></a>
+                <div class="drop_down_nav">
+                    <span class="blk"></span>
+                    <div class="navmobile ignoreclick"><a href="#">PC Components<span>▼</span></a></div>
+                    <div class="nav_sec">
+                        <ul>
+                            <li><a href="/tag/cpus">CPUs</a></li>
+                            <li><a href="/tag/gpus">GPUs</a></li>
+                            <li><a href="/tag/mb">Motherboards</a></li>
+                            <li><a href="/tag/ssd">SSDs</a></li>
+                            <li><a href="/tag/casecoolingpsus">Cases/Cooling/PSUs</a></li>
+                            <li><a href="/tag/memory">Memory</a></li>
+                            <li><a href="/tag/nas">NAS</a></li>
+                            <li><a href="/tag/storage">Storage</a></li>
+                        </ul>
+                    </div>
+                    <div class="navmobile ignoreclick"><a href="#">Smartphones &amp; tablets<span>▼</span></a></div>
+                    <div class="nav_sec">
+                        <ul>
+                            <li><a href="/tag/smartphones">Smartphones</a></li>
+                            <li><a href="/tag/tablets">Tablets</a></li>
+                            <li><a href="/tag/huawei">Huawei</a></li>
+                            <li><a href="/tag/htc">HTC</a></li>
+                            <li><a href="/tag/samsung">Samsung</a></li>
+                            <li><a href="/tag/google">Google/Android</a></li>
+                            <li><a href="/tag/microsoft">Microsoft</a></li>
+                            <li><a href="/tag/apple">Apple</a></li>
+                            <li><a href="/tag/soc">SoCs</a></li>
+                        </ul>
+                    </div>
+                    <div class="navmobile ignoreclick"><a href="#">Systems<span>▼</span></a></div>
+                    <div class="nav_sec">
+                        <ul>
+                            <li><a href="/tag/laptops">Notebook Reviews</a></li>
+                            <li><a href="/tag/desktops">Desktop Reviews</a></li>
+                            <li><a href="/tag/mac">Mac Reviews</a></li>
+                            <li><a href="/tag/ultrabook">Ultrabooks</a></li>
+                        </ul>
+                    </div>
+                    <div><a href="/tag/enterprise">ENTERPRISE & IT</a></div>
+                    <div class="navmobile ignoreclick"><a href="#">GUIDES<span>▼</span></a></div>
+                    <div class="nav_sec">
+                        <ul>
+                            <li><a href="/show/9793/best-cpus">Best CPUs</a></li>
+                            <li><a href="/show/9799/best-ssds">Best SSDs</a></li>
+                            <li><a href="/show/9798/best-laptops">Best Laptops</a></li>
+                            <li><a href="/show/9770/best-android-phones">Best Android Phones</a></li>
+                            <li><a href="/show/12050/best-video-cards">Best Video Cards</a></li>
+                            <li><a href="/show/12056/best-psus">Best PSUs</a></li>
+                            <li><a href="/show/12072/best-motherboards">Best Motherboards</a></li>
+                            <li><a href="/show/12058/best-gaming-laptops">Best Gaming Laptops</a></li>
+                            <li style="height: 60px !important;"><a href="/show/12061/best-mechanical-keyboards">Best Mechanical Keyboards</a></li>
+                            <li><a href="/show/12075/best-consumer-hdds">Best Consumer HDDs</a></li>
+                        </ul>
+                    </div>
+                    <div><a href="/tag/deals">DEALS</a></div>
+                </div>
+            </div>
+        </div>
+        
+    <nav class="breadcrumb nowidth show_resp2">
+        <ul>
+            <li>
+                <a href="/">Home</a><span>&gt;</span>
+                    <a href="/tag/servers">Servers</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </nav>
+
+
+        
+        <nav class="nav inner_nav animenu">
+            <input type="checkbox" id="button">
+            <label for="button">Menu</label>
+            <ul>
+                <li>
+                    <a href="#" class="ignoreclick">PC Components<span>▼</span></a>
+                    <ul>
+                        <li><a href="/tag/cpus">CPUs</a></li>
+                        <li><a href="/tag/gpus">GPUs</a></li>
+                        <li><a href="/tag/mb">Motherboards</a></li>
+                        <li><a href="/tag/ssd">SSDs</a></li>
+                        <li><a href="/tag/casecoolingpsus">Cases/Cooling/PSUs</a></li>
+                        <li><a href="/tag/memory">Memory</a></li>
+                        <li><a href="/tag/nas">NAS</a></li>
+                        <li><a href="/tag/storage">Storage</a></li>
+                    </ul>
+
+                </li>
+                <li>
+                    <a href="#" class="ignoreclick">Smartphones &amp; tablets<span>▼</span></a>
+                    <ul>
+                        <li><a href="/tag/smartphones">Smartphones</a></li>
+                        <li><a href="/tag/tablets">Tablets</a></li>
+                        <li><a href="/tag/huawei">Huawei</a></li>
+                        <li><a href="/tag/htc">HTC</a></li>
+                        <li><a href="/tag/samsung">Samsung</a></li>
+                        <li><a href="/tag/google">Google/Android</a></li>
+                        <li><a href="/tag/microsoft">Microsoft</a></li>
+                        <li><a href="/tag/apple">Apple</a></li>
+                        <li><a href="/tag/soc">SoCs</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="ignoreclick">Systems<span>▼</span></a>
+                    <ul>
+                        <li><a href="/tag/laptops">Notebook Reviews</a></li>
+                        <li><a href="/tag/desktops">Desktop Reviews</a></li>
+                        <li><a href="/tag/mac">Mac Reviews</a></li>
+                        <li><a href="/tag/ultrabook">Ultrabooks</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/tag/enterprise" class="">Enterprise & IT</a>
+                </li>
+                <li>
+                    <a href="#" class="ignoreclick">Guides<span>▼</span></a>
+                    <ul>
+                        <li><a href="/show/9793/best-cpus">Best CPUs</a></li>
+                        <li><a href="/show/9799/best-ssds">Best SSDs</a></li>
+                        <li><a href="/show/9798/best-laptops">Best Laptops</a></li>
+                        <li><a href="/show/9770/best-android-phones">Best Android Phones</a></li>
+                        <li><a href="/show/12050/best-video-cards">Best Video Cards</a></li>
+                        <li><a href="/show/12056/best-psus">Best PSUs</a></li>
+                        <li><a href="/show/12072/best-motherboards">Best Motherboards</a></li>
+                        <li><a href="/show/12058/best-gaming-laptops">Best Gaming Laptops</a></li>
+                        <li style="height: 60px !important;"><a href="/show/12061/best-mechanical-keyboards">Best Mechanical Keyboards</a></li>
+                        <li><a href="/show/12075/best-consumer-hdds">Best Consumer HDDs</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/tag/deals" class="">Deals</a>
+                </li>
+            </ul>
+        </nav>
+
+            <nav class="topic_menu topic_inner" style="width: 280px; padding: 6px 0 0 6px;float: right;">
+                <div class="fbholder-fp" style="float:left; margin-right: 15px;"><div class="fb-like" data-href="http://www.facebook.com/AnandTech" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-colorscheme="dark"></div></div>
+                <a href="https://twitter.com/anandtech" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false"></a>
+                <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+
+            </nav>
+            <nav class="topic_menu topic_inner">
+                <ul>
+                    
+                    <li class="topin_title">TRENDING TOPICS</li>
+                            <li class="nosep"><a href="/tag/cpus">CPUs</a></li>
+                            <li><a href="/tag/intel">Intel</a></li>
+                            <li><a href="/tag/mobile">Mobile</a></li>
+                            <li><a href="/tag/smartphones">Smartphones</a></li>
+                            <li><a href="/tag/amd">AMD</a></li>
+                            <li><a href="/tag/mb">Motherboards</a></li>
+                            <li><a href="/tag/gpus">GPUs</a></li>
+                            <li><a href="/tag/storage">Storage</a></li>
+                            <li><a href="/tag/asus">Asus</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+    </header>
+
+    <section class="content">
+            <section class="main_cont">
+
+                
+
+<div class="breadcrumb_area hide_resp2">
+    <nav class="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a><span>&gt;</span></li>
+                <li><a href="/tag/servers">Servers</a></li>
+        </ul>
+        <div class="clear"></div>
+    </nav>
+
+    
+    <div class="clear"></div>
+</div>
+
+
+
+<div class="review_blog">
+    <div class="blog_top_left">
+        <a href="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd"><h1>Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute</h1></a>
+        <span>by <a href="#"><a class='b' href='/Author/168'>Andrei Frumusanu</a></a> <em>on March 10, 2020 8:30 AM EST</em> </span>
+        <ul class="hide_resp2">
+            <li>Posted in</li>
+            <li><a href="/tag/servers">Servers</a></li>
+                <li><a href="/tag/cpus">CPUs</a></li>
+                <li><a href="/tag/cloud-computing">Cloud Computing</a></li>
+                <li><a href="/tag/amazon">Amazon</a></li>
+                <li><a href="/tag/aws">AWS</a></li>
+                <li><a href="/tag/neoverse-n1">Neoverse N1</a></li>
+                <li><a href="/tag/graviton2">Graviton2</a></li>
+        </ul>
+    </div>
+
+    <div class="blog_top_right show_resp2">
+        <span><a href="#comments">97 <small>Comments</small></a></span>
+        | <strong><a class="icAddComment" href="/Comment/NewComment/15578?page=1&commentPage=1&showAllComments=False">Add A Comment</a></strong>
+    </div>
+    <div class="blog_top_right hide_resp2">
+
+            <span><a href="#comments">97 <small>Comments</small></a></span>
+        <strong><a class="icAddComment" href="/Comment/NewComment/15578?page=1&commentPage=1&showAllComments=False">+ Add A<br>Comment</a></strong>
+    </div>
+    <div class="clear"></div>
+</div>
+
+    <script type='text/javascript'>
+        function go_here(navigation_list) {
+            var new_ContentPagesURL = navigation_list.options[navigation_list.selectedIndex].value;
+            if (new_ContentPagesURL != "") {
+                self.location = new_ContentPagesURL;
+            }
+        }
+    </script>
+    <div class="article_links_top">
+        <select name="ContentPagesListTop" onchange="go_here(this)">
+                    <option selected="selected" value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd">Amazon&#39;s Graviton2: First Neoverse N1 Chip</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/2">CPU Chip Topologies</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/3">Memory Subsystem &amp; Latency</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/4">Compiler Setup, GCC vs LLVM</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/5">SPEC - Single Threaded Performance</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/6">SPEC - Multi-Core Performance Scaling</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/7">SPEC - MT Performance (16xlarge 64vCPU)</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/8">SPEC - MT Performance (4xlarge 16 vCPU)</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/9">Cost Analysis - An x86 Massacre</option>
+                    <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/10">Conclusion &amp; End Remarks</option>
+        </select>
+    </div>
+
+<div class="sidepadding review">
+
+                <div style="margin: 0 auto; text-align: center;">
+                    <img src="https://images.anandtech.com/doci/15578/car_678x452.jpg" alt="" />
+                </div>
+
+            <div style="float: right; margin: 13px 0px 15px 15px;">
+                <div id="middle_ad">
+                    <script type="text/javascript">
+                        if (screenContext != 'mobile') {
+                            tmntag.cmd.push(function () { tmntag.adTag('middle_ad', false); });
+                        }
+                    </script>
+                </div>
+
+                <div class="clear"></div>
+
+
+
+            </div>
+
+
+        <div class="articleContent">
+            <p>It&rsquo;s been a year and a half since Amazon released their first-generation Graviton Arm-based processor core, publicly available in AWS EC2 as the so-called &#39;A1&#39; instances. While the processor didn&rsquo;t impress all too much in terms of its performance, it was a signal and first step of what&rsquo;s to come over the next few years.</p>
+
+<p>This year, Amazon is doubling down on its silicon efforts, having <a href="https://www.anandtech.com/show/15189/amazon-announces-graviton2-soc-along-with-new-aws-instances-64core-arm-with-large-performance-uplifts">announced the new Graviton2 processor</a> last December, and planning public availability on EC2 in the next few months. The latest generation implements Arm&rsquo;s new Neoverse N1 CPU microarchitecture and mesh interconnect, a combined infrastructure oriented <a href="https://www.anandtech.com/show/13959/arm-announces-neoverse-n1-platform">platform that we had detailed a little over a year ago</a>. The platform is a massive jump over previous Arm-based server attempts, and Amazon is aiming for nothing less than a leading competitive position.</p>
+
+<p>Amazon&rsquo;s endeavours in designing a custom SoC for its cloud services started back in 2015, when the company acquired Isarel-based Annapurna Labs. Annapurna had previously worked on networking-focused Arm SoCs, mostly used <a href="https://www.anandtech.com/show/8985/synology-ds2015xs-review-an-armbased-10g-nas">in products such as NAS devices</a>. Under Amazon, the team had been tasked with creating a custom Arm server-grade chip, and the new Graviton2 is the first serious attempt at disrupting the space.</p>
+
+<p align="center"><a href="https://images.anandtech.com/doci/15578/16xlarge2.png"><img alt="" src="https://images.anandtech.com/doci/15578/16xlarge2_575px.png" /></a></p>
+
+<p>So, what is the Graviton2? It&rsquo;s a 64-core monolithic server chip design, using Arm&rsquo;s new Neoverse N1 cores (Microarchitectural derivatives of the <a href="https://www.anandtech.com/show/12785/arm-cortex-a76-cpu-unveiled-7nm-powerhouse">mobile Cortex-A76 cores</a>) as well as Arm&rsquo;s <a href="https://www.anandtech.com/show/10711/arm-cmn-600-dmc-620-128-cores-8-channel-ddr4">CMN-600 mesh interconnect</a>. It&rsquo;s a pretty straightforward design that is essentially almost identical to Arm&rsquo;s 64-core reference N1 platform that the company had presented back a year ago. Amazon did diverge a little bit, for example the Graviton2&rsquo;s CPU cores are clocked in at a bit lower 2.5GHz as well as including only 32MB instead of 64MB of L3 cache into the mesh interconnect. The system is backed by 8-channel DDR-3200 memory controllers, and the SoC supports 64 PCIe4 lanes for I/O. It&rsquo;s a relatively textbook design implementation of the N1 platform, manufactured on TSMC&rsquo;s 7nm process node.</p>
+
+<p align="center"><a href="https://images.anandtech.com/doci/15578/03_Infra%20Tech%20Day%202019_Filippo%20Neoverse%20N1%20FINAL%20WM15.jpg"><img alt="" src="https://images.anandtech.com/doci/15578/03_Infra%20Tech%20Day%202019_Filippo%20Neoverse%20N1%20FINAL%20WM15_575px.jpg" /></a></p>
+
+<p>The Graviton2&rsquo;s potential is of course enabled by the new N1 cores. We&rsquo;ve already seen the Cortex-A76 <a href="https://www.anandtech.com/show/13614/arm-delivers-on-cortex-a76-promises">perform fantastically</a> in last year&rsquo;s mobile SoCs, and the N1 microarchitecture is expected to bring even better performance and server-grade features, all whilst retaining the power efficiency that&rsquo;s made Arm so successful in the mobile space. The N1 cores remain very lean and efficient, at a projected ~1.4mm&sup2; for a 1MB L2 cache implementation such as on the Graviton2, and sporting excellent power efficiency at around ~1W per core at the 2.5GHz frequency at which Amazon&rsquo;s new chip arrives at.</p>
+
+<p>Total power consumption of the SoC is something that Amazon wasn&rsquo;t too willing to disclose in the context of our article &ndash; the company is still holding some aspects of the design close to its chest even though we were able to test the new chipset in the cloud. Given the chip&rsquo;s more conservative clock rate, Arm&rsquo;s projected figure of around 105W for a 64-core 2.6GHz implementation, and Ampere&rsquo;s recent disclosure of their 80-core 3GHz N1 server chip coming in at 210W, we estimate that the Graviton2 must come in around anywhere between 80W as a low estimate to around 110W for a pessimistic projection.</p>
+
+<h3>Testing In The Cloud With EC2</h3>
+
+<p>Given that Amazon&rsquo;s Graviton2 is a vertically integrated product specifically designed for Amazon&rsquo;s needs, it makes sense that we test the new chipset in its intended environment (Besides the fact that it&rsquo;s not available in any other way!). For the last couple of weeks, we&rsquo;ve had preview access for Amazon Web Services (AWS) Elastic Compute Cloud (EC2) new Graviton2 based &ldquo;m6g&rdquo; instances.</p>
+
+<p>For readers unfamiliar with cloud computing, essentially this means we&rsquo;ve been deploying virtual machines in Amazon&rsquo;s datacentres, a service for which Amazon has become famous for and which now represents a major share of the company&rsquo;s revenues, powering some of the biggest internet services on the market.</p>
+
+<p>An important metric determining the capabilities of such instances is their type (essentially dictating what CPU architecture and microarchitecture powers the underlying hardware) and possible subtype; in Amazon&rsquo;s case this refers to variations of platforms that are designed for specialised use-cases, such as having better compute capabilities or having higher memory capacity capabilities.</p>
+
+<p>For today&rsquo;s testing we had access to the &ldquo;m6g&rdquo; instances which are designed for general purpose&nbsp;workloads. The &ldquo;6&rdquo; in the nomenclature designates Amazon&rsquo;s 6<sup>th</sup> generation hardware&nbsp;in EC2, with the Graviton2 currently being the only platform holding this designation. &nbsp;</p>
+
+<h3>Instance Throughput Is Defined in vCPUs</h3>
+
+<p>Beyond the instance type, the most important other metric that defined an instance&rsquo;s capabilities is its vCPU count. &ldquo;Virtual CPUs&rdquo; essentially means your logical CPU cores that&rsquo;s available to the virtual machine. Amazon offers instances ranging from 1 vCPU to up to 128, with the most common across the most popular platforms coming in sizes of 2, 4, 8, 16, 32, 48, 64, and 96.</p>
+
+<p>The Graviton2 being a single-socket 64-core platform without SMT means that the maximum available vCPU instance size is 64.</p>
+
+<p>However, what this also means, is that we&rsquo;re quite in a bit of an apples-and-oranges conundrum of a comparison when talking about platforms which do come with SMT. When talking about 64 vCPU instances (&ldquo;16xlarge&rdquo; in EC2 lingo), this means that for a Graviton2 instance we&rsquo;re getting 64 physical cores, while for an AMD or Intel system, we&rsquo;d be only getting 32 physical cores with SMT. I&rsquo;m sure there will be readers who will be considering such a comparison &ldquo;unfair&rdquo;, however it&rsquo;s also the positioning that Amazon is out to make in terms of delivered throughput, and most importantly, the equivalent pricing between the different instance types.</p>
+
+<h3>Today&rsquo;s Competition</h3>
+
+<p>Today&rsquo;s article will focus around two main competitors to the Graviton2: AMD EPYC 7571 (Zen1) powered m5a instances, and Intel Xeon Platinum 8259CL (Cascade Lake) powered m5n instances. At the moment of writing, these are the most powerful instances available from the two x86 incumbents, and should provide the most interesting comparison data.</p>
+
+<p>It&rsquo;s to be noted that we would have loved to be able to include AMD EPYC2 Rome based (c5a/c5ad) instances in this comparison; Amazon had announced they had been&nbsp;working on such deployments <a href="https://aws.amazon.com/blogs/aws/in-the-works-new-amd-powered-compute-optimized-ec2-instances-c5a-c5ad/">last November</a>, but alas the company wasn&rsquo;t willing to share with us preview access (One reason given was the Rome C-type instances weren&rsquo;t a good comparison to the Graviton2&rsquo;s M-type instance, although this really doesn&rsquo;t make any technical sense). As these instances are getting closer to preview availability, we&rsquo;ll be working on a separate article to add that important piece of the puzzle of the competitive landscape.</p>
+
+<table align="center" border="1" cellpadding="0" cellspacing="1" width="650">
+	<tbody>
+		<tr class="tgrey">
+			<td align="center" colspan="4">Tested 16xlarge EC2 Instances</td>
+		</tr>
+		<tr class="tlblue">
+			<td width="10%">&nbsp;</td>
+			<td width="20%">m6g</td>
+			<td width="20%">m5a</td>
+			<td width="20%">m5n</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">CPU Platform</td>
+			<td style="text-align: center;"><strong>Graviton2</strong></td>
+			<td style="text-align: center;">EPYC 7571</td>
+			<td style="text-align: center;">Xeon Platinum 8259CL</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">vCPUs</td>
+			<td colspan="3" style="text-align: center;"><strong>64</strong></td>
+		</tr>
+		<tr>
+			<td class="tlgrey">Cores Per Socket</td>
+			<td style="text-align: center;"><strong>64</strong></td>
+			<td style="text-align: center;">32</td>
+			<td style="text-align: center;">24<br />
+			<em>(16 instantiated)</em></td>
+		</tr>
+		<tr>
+			<td class="tlgrey">SMT</td>
+			<td style="text-align: center;">-</td>
+			<td style="text-align: center;">2-way</td>
+			<td style="text-align: center;">2-way</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">CPU Sockets</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;"><strong>2</strong></td>
+		</tr>
+		<tr>
+			<td class="tlgrey">Frequencies</td>
+			<td style="text-align: center;">2.5GHz</td>
+			<td style="text-align: center;">2.5-2.9GHz</td>
+			<td style="text-align: center;">2.9-3.2GHz</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">Architecture</td>
+			<td style="text-align: center;"><strong>Arm v8.2</strong></td>
+			<td style="text-align: center;">x86-64 + AVX2</td>
+			<td style="text-align: center;">x86-64 + AVX512</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">&micro;architecture</td>
+			<td style="text-align: center;"><strong>Neoverse N1</strong></td>
+			<td style="text-align: center;">Zen</td>
+			<td style="text-align: center;">Cascade Lake</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">L1I Cache</td>
+			<td style="text-align: center;">64KB</td>
+			<td style="text-align: center;">64KB</td>
+			<td style="text-align: center;">32KB</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">L1D Cache</td>
+			<td style="text-align: center;">64KB</td>
+			<td style="text-align: center;">32KB</td>
+			<td style="text-align: center;">32KB</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">L2 Cache</td>
+			<td style="text-align: center;">1MB</td>
+			<td style="text-align: center;">512KB</td>
+			<td style="text-align: center;">1MB</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">L3 Cache</td>
+			<td style="text-align: center;">32MB shared</td>
+			<td style="text-align: center;">8MB shared<br />
+			per 4-core CCX</td>
+			<td style="text-align: center;">35.75MB shared<br />
+			per socket</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">Memory Channels</td>
+			<td style="text-align: center;">8x DDR4-3200</td>
+			<td style="text-align: center;">8x DDR-2666<br />
+			(2x per NUMA-node)</td>
+			<td style="text-align: center;">6x DDR4-2933<br />
+			per socket</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">NUMA Nodes</td>
+			<td style="text-align: center;"><strong>1</strong></td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">2</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">DRAM</td>
+			<td colspan="3" style="text-align: center;">256GB</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">TDP</td>
+			<td style="text-align: center;">Estimated<br />
+			80-110W?</td>
+			<td style="text-align: center;">180W</td>
+			<td style="text-align: center;">210W<br />
+			per socket</td>
+		</tr>
+		<tr>
+			<td class="tlgrey">Price</td>
+			<td style="text-align: center;"><strong>$2.464 / hour</strong></td>
+			<td style="text-align: center;"><strong>$2.752 / hour</strong></td>
+			<td style="text-align: center;"><strong>$3.808 / hour</strong></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Comparing the Graviton2 m6g instances against the AMD m5a and Intel m5n instances, we&rsquo;re seeing a few differences in the hardware capabilities that power the VMs. Again, the most notorious difference is the fact that the Graviton2 comes with physical core counts matching the deployed vCPU number, whilst the competition counts SMT logical cores as vCPUs as well.</p>
+
+<p>Other aspects when talking about higher-vCPU count instances is the fact that you can receive a VM that spans across several sockets. AMD&rsquo;s m5a.16xlarge here is still able to deploy the VM on a single socket thanks to the EPYC 7571&rsquo;s 32 cores, however Intel&rsquo;s Xeon system here employs two sockets as currently there&rsquo;s no deployed Intel hardware in EC2 which can offer the required vCPU count in a single socket.</p>
+
+<p>Both the EPYC 7571 and the Xeon Platinum 8259CL are parts which aren&rsquo;t publicly available or even listed on either company&rsquo;s SKU list, so these are custom parts for the likes of Amazon for datacentre deployments.</p>
+
+<p>The AMD part is a 32-core Zen1 based single-socket solution (at least for the 16xlarge instances in our testing) clocking in at 2.5 GHz all-cores to up to 2.9GHz in lightly threaded scenarios. The peculiarity of this system is that it&rsquo;s somewhat limited by AMD&rsquo;s quad-chip MCM system which has four NUMA nodes (one per chip and 2-channel memory controller), a characteristic that&rsquo;s been eliminated in <a href="https://www.anandtech.com/show/14694/amd-rome-epyc-2nd-gen">the newer EPYC2 Zen2</a> based systems. We don&rsquo;t have concrete confirmation on the data, but we suspect this is a 180W part based on the SKU number.</p>
+
+<p>Intel&rsquo;s Xeon Platinum 8259CL is based on the <a href="https://www.anandtech.com/show/14146/intel-xeon-scalable-cascade-lake-deep-dive-now-with-optane">newer Cascade Lake generation CPU cores</a>. This particular part is also specific to Amazon, and consists of 24 enabled cores per socket. To reach the 16xlarge 64 vCPU count, EC2 provides us a dual-socket system with 16 out of the 24 cores instantiated on each socket. Again, we have no confirmation on the matter, but these parts should be rated at 210W per socket, or 420W total. We do have to remind ourselves that we&rsquo;re only ever using 66% of the system&rsquo;s cores in our instance, although we do have access to the full memory bandwidth and caches of the system.</p>
+
+<p>The cache configuration in particular is interesting here as things differ quite a bit between platforms. The private caches of the actual CPUs themselves are relatively self-explanatory, and the Graviton2 here does provide the highest capacity of cache out of the trio, but is otherwise equal to the Xeon platform. If we were to divide the available cache on a per-thread basis, the Graviton2 leads the set at 1.5MB, ahead of the EPYC&rsquo;s 1.25MB and the Xeon&rsquo;s 1.05MB. The Graviton2 and Xeon systems have the distinct advantage that their last level caches are shared across the whole socket, while AMD&rsquo;s L3 is shared only amongst 4-core CCX modules.</p>
+
+<p>The NUMA discrepancies between the systems aren&rsquo;t that important in parallel processing workloads with actual multiple processes, but it will have an impact on multi-threaded as well as single-threaded performance, and the Graviton2&rsquo;s unified memory architecture will have an important advantage in a few scenarios.</p>
+
+<p>Finally, there&rsquo;s quite a difference in the pricing between the instances. At $2.46 per hour, the Graviton2 system edges out the AMD system in price, and is massively cheaper than the $3.80 per hour cost of the Xeon based instance. Although when talking about pricing, we do have to remember that the actual value delivered will also wildly depend on the performance and throughput of the systems, which we&rsquo;ll be covering in more detail later in the article.</p>
+
+<p>We thank Amazon for providing us with preview access to the m6g Graviton2 instances. Aside from giving us access, Amazon nor any other of the mentioned companies have had influence in our testing methodology, and we paid for our EC2 instance testing time ourselves.</p>
+
+        </div>
+        <div class="article_links">
+                            <a href="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/2" class="fl-rt">CPU Chip Topologies</a>
+
+                <select name="ContentPagesList" onchange="go_here(this)">
+                            <option selected="selected" value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd">Amazon&#39;s Graviton2: First Neoverse N1 Chip</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/2">CPU Chip Topologies</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/3">Memory Subsystem &amp; Latency</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/4">Compiler Setup, GCC vs LLVM</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/5">SPEC - Single Threaded Performance</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/6">SPEC - Multi-Core Performance Scaling</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/7">SPEC - MT Performance (16xlarge 64vCPU)</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/8">SPEC - MT Performance (4xlarge 16 vCPU)</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/9">Cost Analysis - An x86 Massacre</option>
+                            <option value="/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/10">Conclusion &amp; End Remarks</option>
+                </select>
+        </div>
+            <div class="clear"></div>
+            <div class="fl-lt" style="clear: both; margin: 25px 0px 15px; height: 35px; width:150px;">
+                <iframe src="//www.facebook.com/plugins/like.php?href=http://www.anandtech.com/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=201944423199922" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowtransparency="true"></iframe>
+            </div>
+            <div class="fl-lt" style="margin: 25px 0px 15px; height: 35px; width:90px;">
+                <div class="g-plusone" data-size="medium"></div>
+                <script type="text/javascript">
+                    (function () {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/platform.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </div>
+            <div class="fl-lt" style="margin: 25px 0px 15px; height: 35px; width:120px;">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div class="fl-rt" style="margin: 22px 0px 15px;">
+                <div class="button left"><a href="/print/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd" class="print_article"><span>PRINT THIS ARTICLE</span></a></div>
+            </div>
+            <div class="fl-rt" style="margin: 22px 8px 15px; height: 0px;">
+            </div>
+            <div class="clear"></div>
+            <div style="text-align: center;" id="resp_middle_ad">
+                <script type="text/javascript">
+                    if (screenContext == 'mobile') {
+                        tmntag.cmd.push(function () { tmntag.adTag('resp_middle_ad', false); });
+                    }
+                </script>
+            </div>
+
+
+</div>
+
+    <div class="discussion" id="comments">
+        
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        window.hasCommenting = true;        
+        $('#icTopPost').click(DoTopPost);
+
+        $("#icLoginLink").click(function (e) {
+            window.gotoComment = true;
+
+            $.fancybox.open([
+                    {
+                        href: '#inlineLogin'
+                    }
+                ], {
+                    padding: 0,
+                    titlePosition: 'inside',
+                    transitionIn: 'none',
+                    transitionOut: 'none',
+                    afterShow: function (current, previous) {
+                        $('#UserName').focus();
+
+                    }
+                });
+
+            e.preventDefault();
+            return false;
+
+        });
+        
+        $("#inlineComment").click(function (e) {
+            DoComment();
+            e.preventDefault();
+            return false;
+        });
+
+        $("div#comments a.jqc").click(function () {
+            $.get(this.href, scrollComments);
+            return false;
+        });
+
+    });
+</script>
+<div><a id="commentsAnchor"></a></div>
+<ul id="icReplyHolder">
+    <li id="replybox" class="blog_post_area" style="display: none;">
+        <div class="blog_post_btm">
+            <h3>Post Your Comment</h3>
+            <span id="icMessage">
+                    
+                        Please <a id="icLoginLink" href="/Account/Login?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">log in</a> or <a href="/Account/Register?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">sign up</a> to comment. 
+                    
+                                                                                                                                                                                               
+            </span>
+            <textarea cols="10" rows="10" class="comment_txtarea" placeholder="Enter your comment" id="CommentInput" name="CommentInput"></textarea>
+            <input name="" type="button" id="inlineComment" class="submit_comment_btn" value="Submit Comment" disabled="disabled">
+            <img alt="" src="/Content/images/ajax-loader13.gif" id="icAjaxLoader"/>
+            <input type="hidden" name="ParentCommentId" id="ParentCommentId" />
+            <input type="hidden" name="ReplyLevel" id="ReplyLevel" />
+            <input data-val="true" data-val-number="The field ContentId must be a number." data-val-required="The ContentId field is required." id="ContentId" name="ContentId" type="hidden" value="15578" />
+            <div class="clear"></div>
+        </div>
+    </li>
+</ul>
+
+<div class="blog_comments">
+    
+    <a id="icTopPost" href="/Comment/NewComment/15578?page=1&commentPage=1&showAllComments=False" class="print_article top_post">POST A COMMENT</a>
+    
+
+    
+        <h2>97 Comments</h2>
+        <h3><a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd">View All Comments</a></h3>
+    <ul id="ulComments">
+
+
+<li id="cid691745" style="">
+    <h4><a>SarahKerrigan</a> - Tuesday, March 10, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/691745" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>That single-thread performance is extremely impressive. The multithreaded scaling is ugly, though. Back when N1 was announced, ARM seemed to think 1MB/core was a good spot for Neoverse LLC - I wonder why both Graviton and Altra are going for considerably less.</span>
+    <a onclick="loadReplyBox(this,'691745','0','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=691745&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid691763" style="padding-left:18px;">
+    <h4><a>shing3232</a> - Tuesday, March 10, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/691763" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>it&#39;s gonna costly（die and power wise） to build a interconnect for 64C with good performance. by the time, it would lost its power/perf edge I suppose.</span>
+    <a onclick="loadReplyBox(this,'691763','1','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=691763&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid691810" style="padding-left:18px;">
+    <h4><a>Tabalan</a> - Tuesday, March 10, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/691810" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>Scaling might not be optimal, but performance loses are to expected if you greatly reduce available cache. In the end, MT performance is still far ahead of competition.</span>
+    <a onclick="loadReplyBox(this,'691810','1','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=691810&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid692049" style="padding-left:36px;">
+    <h4><a>ballsystemlord</a> - Thursday, March 12, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/692049" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>You have to remember that the competition is not 64 cores, but 64v cpus. The difference is 60% or more. The Arm Graviton2 is being placed into the best possible light by this comparision.</span>
+    <a onclick="loadReplyBox(this,'692049','2','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=692049&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid692051" style="padding-left:54px;">
+    <h4><a>ballsystemlord</a> - Thursday, March 12, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/692051" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>I mean 60% for the cores that are actually 1 thread. As in, the performance boost by turning on SMT is 40% best case scenario.</span>
+    <a onclick="loadReplyBox(this,'692051','3','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=692051&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid726387" style="padding-left:54px;">
+    <h4><a>autarchprinceps</a> - Sunday, October 25, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/726387" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>I have to disagree. You seem to forget that the arm chip is cheaper. It’s an additional win if it manages to integrate more cores and yet still achieve a comparable single threaded performance. It’s not unfair to compare two products with one seeming to have a stat advantage from the start, if it’s still cheaper or costs the same. Why should a customer care?</span>
+    <a onclick="loadReplyBox(this,'726387','3','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=726387&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid692082" style="padding-left:18px;">
+    <h4><a>zamroni</a> - Thursday, March 12, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/692082" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>L caches uses sram which needs 6 transistors per bit.<br />So, every 1MB needs all least 48 millions transistors without counting transistors for the controller</span>
+    <a onclick="loadReplyBox(this,'692082','1','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=692082&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid693324" style="padding-left:18px;">
+    <h4><a>dianajmclean6</a> - Monday, March 23, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/693324" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>Six months ago I lost my job and after that I was fortunate enough to stumble upon a great website which literally saved me• I started working for them online and in a short time after I&#39;ve started averaging 15k a month••• iｃ&#173;ash68.ｃ&#173;&#173;ｏ&#173;&#173;&#173;&#173;M</span>
+    <a onclick="loadReplyBox(this,'693324','1','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=693324&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid691746" style="">
+    <h4><a>RallJ</a> - Tuesday, March 10, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/691746" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>Comparisons made are to the whole core performance of Graviton to just thread performance of Xeon/EPYC. It&#39;s very problematic.<br /><br />Also TDP rating for the graviton is off by 50% based on what was reported at re:Invent.</span>
+    <a onclick="loadReplyBox(this,'691746','0','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=691746&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+<li id="cid691747" style="padding-left:18px;">
+    <h4><a>Andrei Frumusanu</a> - Tuesday, March 10, 2020 - <a href="/comments/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd/691747" style="font-weight:normal; color:#8E8C8C;">link</a></h4>
+    <span>I go over the core/SMT topic in the article, it&#39;s only a problem from a hardware comparison aspect, but it&#39;s very much the correct comparison from a cloud product offering comparison. The value proposition also does not change depending on core count, the instances are priced at similar tiers. </span>
+    <a onclick="loadReplyBox(this,'691747','1','RE: ');return false;" href="/Comment/NewComment/15578?page=1&commentPage=1&parentCommentId=691747&showAllComments=False" class="reply_btn">Reply</a>
+    <div class="clear"></div>
+</li>
+
+
+
+    </ul>
+</div>
+    <nav class="page_nav">
+        <ul>
+                        
+                <li>
+                        <div  class="a"><label for="">1</label></div>
+                </li>
+                <li>
+<a class="jqc" href="/Show/Index/15578?cPage=2&amp;all=False&amp;sort=0&amp;page=1&amp;slug=cloud-clash-amazon-graviton2-arm-against-intel-and-amd#comments">2</a>                </li>
+                <li>
+<a class="jqc" href="/Show/Index/15578?cPage=3&amp;all=False&amp;sort=0&amp;page=1&amp;slug=cloud-clash-amazon-graviton2-arm-against-intel-and-amd#comments">3</a>                </li>
+                <li>
+<a class="jqc" href="/Show/Index/15578?cPage=4&amp;all=False&amp;sort=0&amp;page=1&amp;slug=cloud-clash-amazon-graviton2-arm-against-intel-and-amd#comments">4</a>                </li>
+                <li>
+<a class="jqc" href="/Show/Index/15578?cPage=5&amp;all=False&amp;sort=0&amp;page=1&amp;slug=cloud-clash-amazon-graviton2-arm-against-intel-and-amd#comments">5</a>                </li>
+                <li>
+<a class="jqc" href="/Show/Index/15578?cPage=6&amp;all=False&amp;sort=0&amp;page=1&amp;slug=cloud-clash-amazon-graviton2-arm-against-intel-and-amd#comments">6</a>                </li>
+                                        <li class="arrow">                    
+                    <a class="jqc" href="/Show/Index/15578?cPage=2&amp;all=False&amp;sort=0&amp;page=1&amp;slug=cloud-clash-amazon-graviton2-arm-against-intel-and-amd#comments">▶</a>
+                </li>
+        </ul>
+    </nav>
+
+    </div>
+
+
+
+            </section>
+
+
+<aside class="sidebar">
+    <div id="side_ad">
+        <script type="text/javascript">
+            if (screenContext != 'mobile') {
+                tmntag.cmd.push(function () { tmntag.adTag('side_ad', false); });
+            }
+        </script>
+    </div>
+    
+        <article class="pipeline_stories">
+            <div class="pipeline_title">
+                <h2><a href="/pipeline">PIPELINE STORIES</a>
+                </h2>
+                <a href="mailto:tips@anandtech.com">+ Submit News</a>
+                <div class="clrflt"></div>
+            </div>
+
+            <strong>
+                <a href="/show/17107/at-deals-seasonic-prime-tx750-psu-half-off-at-newegg">AT Deals: Seasonic Prime TX-750 PSU Nearly 50% Off at Newegg</a>
+                <img src="/Content/images/dell_reveal_arrow.png" alt="">
+            </strong>
+
+            <span><a href="/show/17104/imagination-launches-catapult-family-of-riscv-cpu-cores">Imagination Launches Catapult Family of RISC-V CPU Cores: Breaking Into Heterogeneous SoCs</a></span>
+            <span><a href="/show/17101/united-states-ftc-files-lawsuit-to-block-nvidiaarm-acquisition">United States FTC Files Lawsuit to Block NVIDIA-Arm Acquisition</a></span>
+                 
+            <ul>
+                    <li ><a href="/show/17097/western-digital-30tb-hdd-plans-mamr-future-unclear">Western Digital Spills Beans on HDD Plans: 30TB HDDs Planned, MAMR&#39;s Future Unclear</a></li>
+                    <li ><a href="/show/17099/seagate-exos-x20-and-ironwolf-pro-20tb-expand-retail-20tb-hdd-options">Seagate Exos X20 and IronWolf Pro 20TB Expand Retail 20TB HDD Options</a></li>
+                    <li ><a href="/show/17096/at-deals-cooler-master-mh670-gaming-headset-">AT Deals: Cooler Master MH670 Gaming Headset </a></li>
+                    <li ><a href="/show/9798/best-laptops">Best Laptops: Holiday 2021</a></li>
+                    <li ><a href="/show/17094/at-deals-sandisk-ssd-plus-2tb-edition-drops-to-170-at-amazon">AT Deals: SanDisk SSD Plus SATA 2TB Drops to $170 at Amazon</a></li>
+                    <li ><a href="/show/17092/at-deals-samsung-2tb-t7-portable-ssd-only-250">AT Deals: Samsung 2TB T7 Portable SSD Only $250 at Amazon</a></li>
+                    <li ><a href="/show/12056/best-psus">Best PC Power Supplies: Holiday 2021</a></li>
+                    <li ><a href="/show/17089/at-deals-sabrent-4tb-rocket-4-plus-ssd-749-at-amazon">AT Deals: Sabrent 4TB Rocket 4 Plus SSD $749 at Amazon</a></li>
+                    <li ><a href="/show/17086/texas-to-get-multiple-new-fabs-as-samsung-and-ti-to-spend-47-billion-on-new-facilities">Texas To Get Multiple New Fabs as Samsung and TI to Spend $47 Billion on New Facilities</a></li>
+            </ul>
+
+        </article>
+
+    <div id="side_ad2">
+        <script type="text/javascript">
+            if (screenContext != 'mobile') {
+                tmntag.cmd.push(function () { tmntag.adTag('side_ad2', false); });
+            }
+        </script>
+    </div>
+
+    
+
+        <article class="twitter">
+            <h2>TWEETS <img src="/Content/images/twiiter_bird.png" alt="">
+            </h2>
+            <div class="twitter_box">
+                <div class="twitter_cont">
+
+                    <ul>
+                            <li><a href="https://twitter.com/IanCutress"><span>IanCutress</span></a>: <a href="https://twitter.com/IanCutress/status/1468254426360078343">@alpha_poweruser @TechDeals_16 I _mentioned_ them as a point in history for additional context.</a></li>
+                            <li><a href="https://twitter.com/IanCutress"><span>IanCutress</span></a>: <a href="https://twitter.com/IanCutress/status/1467965573627891718">RT @TechDeals_16: Dr. Ian Cutress LIVE w/ Tech Deals
+
+https://t.co/cjdy2sUJZ0
+
+Thank you to @IanCutress for joining us today, please be sur…</a></li>
+                            <li><a href="https://twitter.com/IanCutress"><span>IanCutress</span></a>: <a href="https://twitter.com/IanCutress/status/1467874155555078144">@fasch420691337 My filter is a phone with a case that he can't see through</a></li>
+                            <li><a href="https://twitter.com/IanCutress"><span>IanCutress</span></a>: <a href="https://twitter.com/IanCutress/status/1467859582353559558">To the guy next to me on the plane ordering sex toys, on his work laptop with a privacy filter - your filter doesn't work. Just saying.</a></li>
+                            <li><a href="https://twitter.com/RyanSmithAT"><span>RyanSmithAT</span></a>: <a href="https://twitter.com/RyanSmithAT/status/1467857495322656769">@IanCutress The tried and true method of tech journalism: hanging out at the airport, bars, and other places where engineers congregate</a></li>
+                            <li><a href="https://twitter.com/IanCutress"><span>IanCutress</span></a>: <a href="https://twitter.com/IanCutress/status/1467841425282850816">Austin Airport lounge: the place to be to overhear someone talking about stress testing their DSP</a></li>
+                            <li><a href="https://twitter.com/RyanSmithAT"><span>RyanSmithAT</span></a>: <a href="https://twitter.com/RyanSmithAT/status/1467817540118532096">@CarlVonBraun @IanCutress It's likely not even an Intel photo. It's probably a stock photo from ShutterStock or the like</a></li>
+                            <li><a href="https://twitter.com/RyanSmithAT"><span>RyanSmithAT</span></a>: <a href="https://twitter.com/RyanSmithAT/status/1466571877762011138">I don't consider this unexpected. But I am a bit surprised by the 4-0 vote. https://t.co/pax5PP2krs</a></li>
+                            <li><a href="https://twitter.com/RyanSmithAT"><span>RyanSmithAT</span></a>: <a href="https://twitter.com/RyanSmithAT/status/1466367311787401216">@dlawrie42 Unfortunately, Ian is in Hawaii right now. And Brett's GE76 was returned to MSI. So we can't double-chec… https://t.co/neETteG3Yx</a></li>
+                            <li><a href="https://twitter.com/RyanSmithAT"><span>RyanSmithAT</span></a>: <a href="https://twitter.com/RyanSmithAT/status/1466366822865801218">@dlawrie42 The one-third of the answer I don't have for you is why the two GE76 laptops scored so differently. The… https://t.co/oQad0QwhP6</a></li>
+                            <li><a href="https://twitter.com/ganeshts"><span>ganeshts</span></a>: <a href="https://twitter.com/ganeshts/status/1464404183855992836">@robertheron https://t.co/XN4L9SodqP (No personal experience with this brand)</a></li>
+                            <li><a href="https://twitter.com/ganeshts"><span>ganeshts</span></a>: <a href="https://twitter.com/ganeshts/status/1453569413567766528">@mguthaus Used ones from the office liquidators are usually around half-off (even for barely used ones). Many vendo… https://t.co/wD5qENbXKG</a></li>
+                            <li><a href="https://twitter.com/ganeshts"><span>ganeshts</span></a>: <a href="https://twitter.com/ganeshts/status/1441112140752965632">A Thunderbolt 4 / USB4 hub from @plugable at a very attractive price point (considering the USBC-HDMI value add). A… https://t.co/DiJZS8MmF9</a></li>
+                            <li><a href="https://twitter.com/ganeshts"><span>ganeshts</span></a>: <a href="https://twitter.com/ganeshts/status/1432752849688035331">@JamesDSneed @IanCutress Yes, NAND has the ability to store dynamic sector remap information - this is not only for… https://t.co/J0NYC9oCZk</a></li>
+                            <li><a href="https://twitter.com/ganeshts"><span>ganeshts</span></a>: <a href="https://twitter.com/ganeshts/status/1428387432781651968">@AG_1138 Micron has a history of doing these silent changes. The P2's silent move from TLC to QLC resulted in worse… https://t.co/UfmTilvFi1</a></li>
+                    </ul>
+
+                    
+                </div>
+
+                <a class="twitter_follow_btn pie" href="http://twitter.com/anandtech">Follow <span>@</span>ANANDTECH</a>
+            </div>
+            <strong><img src="/Content/images/twitter_down_arrow.png" alt=""></strong>
+        </article>
+
+
+    <div style="clear: both;">&nbsp;</div>
+
+    <div id="side_ad3">
+        <script type="text/javascript">
+            if (screenContext != 'mobile') {
+                tmntag.cmd.push(function () { tmntag.adTag('side_ad3', false); });
+            }
+        </script>
+    </div>
+
+</aside>
+        <div class="clear"></div>
+
+        <div class="header_ad hide_resp" id="footer_ad">
+            <script type="text/javascript">
+                if (screenContext != 'mobile') {
+                    tmntag.cmd.push(function () { tmntag.adTag('footer_ad', false); });
+                }
+            </script>
+        </div>
+        
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="links">
+            <h2>LINKS</h2>
+            <div class="clear"></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/home/about/">About</a></li>
+                <li><a href="http://forums.anandtech.com">Forums</a></li>
+                <li><a href="/rss/">RSS</a></li>
+                <li><a href="/pipeline/">Pipeline News</a></li>
+                <li><a href="/bench/">Bench</a></li>
+                <li><a href="https://www.futureplc.com/terms-conditions/">Terms of Use</a></li>
+                <li><a href="https://www.futureplc.com/who-we-are/#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h2>TOPICS</h2>
+            <div class="clear"></div>
+            <ul>
+                <li><a href="/tag/cpus">CPUs</a></li>
+                <li><a href="/tag/mb">Motherboards</a></li>
+                <li><a href="/tag/storage">SSD/HDD</a></li>
+                <li><a href="/tag/gpus">GPUs</a></li>
+                <li><a href="/tag/mobile">Mobile</a></li>
+                <li><a href="/tag/enterprise">Enterprise & IT</a></li>
+                <li><a href="/tag/smartphones">Smartphones </a></li>
+                <li><a href="/tag/memory">Memory</a></li>
+                <li><a href="/tag/casecoolingpsus">Cases/Cooling/PSU(s) </a></li>
+            </ul>
+        </div>
+
+        <div class="links link2">
+            <ul>
+                <li><a href="/tag/displays">Displays </a></li>
+                <li><a href="/tag/mac">Mac </a></li>
+                <li><a href="/tag/systems">Systems </a></li>
+                <li><a href="/tag/cloud-computing">Cloud </a></li>
+                <li><a href="/tag/tradeshows">Trade Shows </a></li>
+                <li><a href="/tag/guides">Guides</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h2>FOLLOW</h2>
+            <div class="clear"></div>
+            <ul class="follow">
+                <li>
+                    <a href="http://www.facebook.com/AnandTech/">
+                        <img src="/Content/images/icon-facebook2.png" alt="" /><span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/AnandTech">
+                        <img src="/Content/images/icon-twitter2.png" alt="" /><span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/rss/">
+                        <img src="/Content/images/icon-rss2.png" alt="" /><span>RSS</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+        <div class="footer_left">The Most Trusted in Tech Since 1997</div>
+        <div class="footer_right">
+            <ul>
+                <li><a href="/home/about/">About</a></li>
+                <li><a href="https://www.futureplc.com/services/advertising/">Advertising</a></li>
+                <li class="nomrgn"><a href="https://www.futureplc.com/privacy-policy/">Privacy Policy</a></li>                
+            </ul>
+            <a href="https://www.futureplc.com"><img style="margin-top: 10px;" src="/Content/images/FutureFooterLogo-Transparent.png" alt="purch" /></a>
+            <span>Copyright &copy; 2021. All rights reserved.</span>
+        </div>
+        <div class="clear"></div>
+    </footer>
+
+    <div class="rsp_ft">
+        <div class="footer_resp">
+            <ul class="tabs">
+                <li class="click_btn"><a href="#">TOPICS</a></li>
+                <li><a href="#">FOLLOW</a></li>
+                <li class="right"><a href="#">ABOUT</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <section class="panes">
+            <div class="topic_sec">
+                <div class="topic">
+                    <span class="blk_arrow"><img src="/Content/images/gryBg1.png" alt="" /></span>
+                    <div class="topic_box">
+                        <ul>
+                            <li><a href="/tag/cpus">CPUs</a></li>
+                            <li><a href="/tag/mb">Motherboards</a></li>
+                            <li><a href="/tag/storage">SSD/HDD</a></li>
+                            <li><a href="/tag/gpus">GPUs</a></li>
+                            <li><a href="/tag/mobile">Mobile</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="topic_box">
+                        <ul>
+                            <li><a href="/tag/enterprise">Enterprise & IT</a></li>
+                            <li><a href="/tag/smartphones">Smartphones </a></li>
+                            <li><a href="/tag/memory">Memory</a></li>
+                            <li><a href="/tag/casecoolingpsus">Cases/Cooling/PSU(s) </a></li>
+                            <li><a href="/tag/displays">Displays </a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="topic_box no_mar">
+                        <ul>
+                            <li><a href="/tag/mac">Mac </a></li>
+                            <li><a href="/tag/systems">Systems </a></li>
+                            <li><a href="/tag/cloud-computing">Cloud </a></li>
+                            <li><a href="/tag/tradeshows">Trade Shows </a></li>
+                            <li><a href="/tag/guides">Guides</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panes">
+            <div class="topic_sec">
+                <div class="topic">
+                    <span class="blk_arrow left"><img src="/Content/images/gryBg1.png" alt="" /></span>
+                    <div class="follow_block ctr">
+                        <a href="http://www.facebook.com/AnandTech/"><img src="/Content/images/icon-facebook2.png" alt="" />Facebook</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="http://www.twitter.com/AnandTech"><img src="/Content/images/icon-twitter2.png" alt="" />Twitter</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="/rss/"><img src="/Content/images/icon-rss2.png" alt="" />RSS</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panes">
+            <div class="topic_sec">
+                <div class="topic">
+                    <span class="blk_arrow right"><img src="/Content/images/gryBg1.png" alt="" /></span>
+                    <div class="follow_block ctr">
+                        <a href="/home/about/">About</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="https://www.futureplc.com/services/advertising/">Advertising</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="https://www.futureplc.com/privacy-policy/">Privacy Policy</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="https://www.futureplc.com/who-we-are/#contact">Contact Us</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="https://www.futureplc.com/terms-conditions/">Terms of Use</a>
+                    </div>
+
+                    <div class="follow_block ctr">
+                        <a href="/account/fullsite?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Show Full Site</a>
+                    </div>
+
+
+                    <div class="clear"></div>
+                    <div class="footer_copy">Copyright &copy; 2021. All rights reserved.</div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="mobi-footer">
+            <div class="mobile"><a href="#">BENCH</a></div>
+            <div class="topic_sec">
+                <div class="bench_box show_resp2">
+                    <div class="bench_carousel show_resp2">
+                        <ul>
+                            <li><a href="/Bench/CPU"><img src="/Content/images/bench_li_pic1.jpg" alt=""><span>CPU</span></a></li>
+                            <li><a href="/Bench/SSD"><img src="/Content/images/bench_li_pic2.jpg" alt=""><span>SSD</span></a></li>
+                            <li><a href="/Bench/GPU13"><img src="/Content/images/gpubench2013.jpg" alt=""><span>GPU<br>2013</span></a></li>
+                            <li><a href="/Bench/GPU12"><img src="/Content/images/bench_li_pic3.jpg" alt=""><span>GPU<br>2012</span></a></li>
+                            <li><a href="/Bench/Smartphone11"><img src="/Content/images/bench_li_pic5.jpg" alt=""><span>Smartphone<br>2011</span></a></li>
+                            <li><a href="/Bench/Mobile"><img src="/Content/images/bench_li_pic6.jpg" alt=""><span>Mobile</span></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile"><a href="#">TOPICS</a></div>
+
+            <div class="topic_sec">
+                <div class="topic res_topic">
+                    <div class="topic_box res_topicBox">
+                        <ul>
+                            <li><a href="/tag/cpus">CPUs</a></li>
+                            <li><a href="/tag/mb">Motherboards</a></li>
+                            <li><a href="/tag/storage">SSD/HDD</a></li>
+                            <li><a href="/tag/gpus">GPUs</a></li>
+                            <li><a href="/tag/mobile">Mobile</a></li>
+                            <li><a href="/tag/enterprise">Enterprise & IT</a></li>
+                            <li><a href="/tag/smartphones">Smartphones </a></li>
+                            <li><a href="/tag/memory">Memory</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="topic_box no_mar res_topicBox">
+                        <ul>
+                            <li><a href="/tag/casecoolingpsus">Cases/Cooling/PSU(s) </a></li>
+                            <li><a href="/tag/displays">Displays </a></li>
+                            <li><a href="/tag/mac">Mac </a></li>
+                            <li><a href="/tag/systems">Systems </a></li>
+                            <li><a href="/tag/cloud-computing">Cloud </a></li>
+                            <li><a href="/tag/tradeshows">Trade Shows </a></li>
+                            <li><a href="/tag/guides">Guides</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="mobile"><a href="#">FOLLOW</a></div>
+            <div class="topic_sec">
+                <div class="topic res_topic">
+                    <div class="follow_block">
+                        <a href="http://www.facebook.com/AnandTech/"><img src="/Content/images/icon-facebook2.png" alt="">Facebook</a>
+                    </div>
+
+                    <div class="follow_block">
+                        <a href="http://www.twitter.com/AnandTech"><img src="/Content/images/icon-twitter2.png" alt="">Twitter</a>
+                    </div>
+
+                    <div class="follow_block width">
+                        <a href="/rss/"><img src="/Content/images/icon-rss2.png" alt="">RSS</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="mobile"><a href="#">ABOUT</a></div>
+            <div class="topic_sec">
+                <div class="topic res_topic">
+                    <div class="topic_box no_mar">
+                        <ul>
+                            <li><a href="/home/about/">About</a></li>
+                            <li><a href="https://www.futureplc.com/services/advertising/">Advertising</a></li>
+                            <li><a href="https://www.futureplc.com/privacy-policy/">Privacy Policy</a></li>           
+                            <li><a href="https://www.futureplc.com/who-we-are/#contact">Contact Us</a></li>
+                            <li><a href="/account/fullsite?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Show Full Site</a></li>
+                            <li class="nomar">Copyright &copy; 2021. All rights reserved.</li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="login_popup">
+        <div id="inlineLogin">
+            <h2>Log in</h2>
+            <h3><span id="ilMessage">Don't have an account? <a href="/Account/Register?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Sign up now</a></span></h3>
+            <div class="login_left">
+                <form action="#">
+                    <div class="login_form">
+                        <label>Username</label>
+                        <input id="UserName" name="UserName" type="text" class="login_field">
+
+                        <label>Password</label>
+                        <input id="Password" name="Password" type="password" class="login_field">
+
+                        <label class="fl-lt" style="margin-right: 10px;" for="RememberMe">Remember Me</label>
+                        <input class="fl-lt" id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                        <input onclick="DoLogin(); return false;" name="" type="submit" class="login_btn" id="inlineLoginButton" value="LOG IN"><img alt="" src="/Content/images/ajax-loader.gif" id="ilAjaxLoader" />
+                        <div class="clear"></div>
+                    </div>
+                </form>
+                <div id="ilLost">
+                    <a href="/Account/ResetPassword?r=%2fshow%2f15578%2fcloud-clash-amazon-graviton2-arm-against-intel-and-amd">Lost your password?</a>
+                </div>
+                <div id="ilTerms">
+                    We’ve updated our terms. By continuing to use the site and/or by logging into your account, you agree to the Site’s updated <a target="_blank" href="https://www.futureplc.com/terms-conditions/">Terms of Use</a> and <a target="_blank" href="https://www.futureplc.com/privacy-policy/">Privacy Policy</a>.
+                </div>
+            <div class="clear"></div>
+        </div>
+</div></div>
+    <div id="oop_ad">
+        <script type="text/javascript">
+            tmntag.cmd.push(function () { tmntag.adTag('oop_ad', false); });
+        </script>
+    </div>
+    <div id="1x1">
+        <script type="text/javascript">
+            tmntag.cmd.push(function () { tmntag.adTag('1x1', false); });
+        </script>
+    </div>
+    <!-- Quantcast Tag -->
+    <script type="text/javascript">
+        var _qevents = _qevents || [];
+
+        (function () {
+            var elem = document.createElement('script');
+            elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+            elem.async = true;
+            elem.type = "text/javascript";
+            var scpt = document.getElementsByTagName('script')[0];
+            scpt.parentNode.insertBefore(elem, scpt);
+        })();
+
+        _qevents.push({
+            qacct: "p-bduwCJZfRi0AI"
+        });
+    </script>
+
+    <noscript>
+        <div style="display: none;">
+            <img src="//pixel.quantserve.com/pixel/p-bduwCJZfRi0AI.gif" border="0" height="1" width="1" alt="Quantcast" />
+        </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+    <!-- Begin omniture Beacon -->
+        <script id="omnitureProperties" language="JavaScript" type="text/javascript">
+            
+
+            var g_o = {};
+
+            g_o.prop15 = "D=v15";
+            g_o.eVar15 = "Non Member";
+            g_o.prop35 = "";
+
+            g_o.pageName = "anand:edt:15578:Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute:pg1";
+            g_o.channel = "Editorial";
+            g_o.prop2 = "D=v2";
+            g_o.eVar2 = "Servers";
+            g_o.prop4 = "D=v4";
+            g_o.eVar4 = "Reviews";
+            g_o.prop5 = "D=v5";
+            g_o.eVar5 = "Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute";
+            g_o.prop6 = "D=v6";
+            g_o.eVar6 = "anand-edt-15578";
+                                        
+            g_o.prop34 = "Servers|CPUs|Cloud Computing|Amazon|AWS|Neoverse N1|Graviton2";
+                
+
+            //var s_code = s.t(); if (s_code) document.write(s_code);
+
+        </script>
+    <!-- End omniture Beacon -->
+            <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-1721979-1']);
+            _gaq.push(['_trackPageview']);
+            dataLayer.push({ 'OmnitureVars': g_o });
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org/",
+            "@type": "Review",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.anandtech.com/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd"
+            },
+            "itemReviewed": {
+                "@type": "Product",
+                "name": "Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://images.anandtech.com/doci/15578/car_678x452.jpg",
+                    "height": "452",
+                    "width": "678"
+                }
+            },
+            "name": "Amazon&#39;s Arm-based Graviton2 Against AMD and Intel: Comparing Cloud Compute",
+            "url": "https://www.anandtech.com/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd",
+            "author": {"@type": "Person","name": "Andrei Frumusanu"},
+            "datePublished": "2020-03-10T12:30:00Z",
+            "publisher": {
+                "@type": "Organization",
+                "@id" : "#AnandTechOrg",
+                "name": "AnandTech",
+                "url": "https://www.anandtech.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.anandtech.com/content/images/rss_logo.png",
+                    "width": "400",
+                    "height": "400"
+                }
+            }
+            }
+        </script>
+
+
+
+<!--  .20 -->
+
+</body>
+</html>

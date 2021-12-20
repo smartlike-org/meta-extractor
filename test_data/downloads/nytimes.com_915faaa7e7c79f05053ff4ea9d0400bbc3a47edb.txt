@@ -1,0 +1,58 @@
+--2021-12-07 22:01:23--  https://www.nytimes.com/2020/03/12/opinion/trump-coronavirus-economy.html
+Resolving www.nytimes.com (www.nytimes.com)... 199.232.189.164
+Connecting to www.nytimes.com (www.nytimes.com)|199.232.189.164|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Connection: close
+  Content-Length: 377157
+  Server: nginx
+  Content-Type: text/html; charset=utf-8
+  x-nyt-data-last-modified: Tue, 07 Dec 2021 20:49:00 GMT
+  Last-Modified: Tue, 07 Dec 2021 20:49:00 GMT
+  x-scoop-last-modified: 2020-03-13T23:18:20.850Z
+  X-PageType: vi-story
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  cache-control: s-maxage=300,no-cache
+  x-nyt-route: vi-story
+  x-datadome-timer: S1638910141.516406,VS0,VE13
+  X-Origin-Time: 2021-12-07 20:49:01 UTC
+  Fastly-Restarts: 1
+  Accept-Ranges: bytes
+  Date: Tue, 07 Dec 2021 21:01:23 GMT
+  Age: 742
+  X-Served-By: cache-lga21968-LGA, cache-muc13954-MUC
+  X-Cache: MISS, HIT
+  X-Cache-Hits: 0, 1
+  X-Timer: S1638910884.520118,VS0,VE31
+  Vary: Accept-Encoding, Fastly-SSL
+  Set-Cookie: nyt-a=CfTD1QYl0J-QQ4Syy-Aqxa; Expires=Wed, 07 Dec 2022 21:01:23 GMT; Path=/; Domain=.nytimes.com; SameSite=none; Secure
+  x-datadome: protected
+  set-cookie: datadome=.DLuMetr5It2VZ22w7dvRDYGyq9z14wiiqMNvWOLY1IT_lZDaRsXDdM1pinEz9c20dhGxZ0b~Bhpn9WVPZQnx.0Lny-hPNY52sfns-Z_w_8N3svL.Cfam.s_0.~u8Pkw; Max-Age=31536000; Domain=.nytimes.com; Path=/; Secure; SameSite=Lax
+  x-nyt-app-webview: 0
+  Set-Cookie: nyt-gdpr=1; Expires=Wed, 08 Dec 2021 03:01:23 GMT; Path=/; Domain=.nytimes.com
+  x-gdpr: 1
+  Set-Cookie: nyt-purr=cfhspnahhud; Expires=Wed, 07 Dec 2022 21:01:23 GMT; Path=/; Domain=.nytimes.com; SameSite=Lax; Secure
+  Set-Cookie: nyt-us=0; Expires=Wed, 08 Dec 2021 03:01:23 GMT; Path=/; Domain=.nytimes.com
+  Set-Cookie: nyt-geo=AT; Expires=Wed, 08 Dec 2021 03:01:23 GMT; Path=/; Domain=.nytimes.com
+  X-Frame-Options: DENY
+  onion-location: https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/2020/03/12/opinion/trump-coronavirus-economy.html
+  X-API-Version: F-F-VI
+  Content-Security-Policy: upgrade-insecure-requests; default-src data: 'unsafe-inline' 'unsafe-eval' https:; script-src data: 'unsafe-inline' 'unsafe-eval' https: blob:; style-src data: 'unsafe-inline' https:; img-src data: https: blob:; font-src data: https:; connect-src https: wss: blob:; media-src data: https: blob:; object-src https:; child-src https: data: blob:; form-action https:; report-uri https://csp.nytimes.com/report;
+  Strict-Transport-Security: max-age=63072000; preload
+  Set-Cookie: nyt-b3-traceid=addd54434d544d63890eda72cbf71499; Path=/; Domain=.nytimes.com; SameSite=none; Secure
+  x-nyt-edge-cache: MISS-HIT
+Length: 377157 (368K) [text/html]
+Saving to: ‘./pages/nytimes.com_915faaa7e7c79f05053ff4ea9d0400bbc3a47edb.html’
+
+     0K .......... .......... .......... .......... .......... 13% 2.90M 0s
+    50K .......... .......... .......... .......... .......... 27% 3.25M 0s
+   100K .......... .......... .......... .......... .......... 40% 7.33M 0s
+   150K .......... .......... .......... .......... .......... 54% 5.35M 0s
+   200K .......... .......... .......... .......... .......... 67% 11.0M 0s
+   250K .......... .......... .......... .......... .......... 81% 10.4M 0s
+   300K .......... .......... .......... .......... .......... 95% 17.8M 0s
+   350K .......... ........                                   100% 5.68M=0.06s
+
+2021-12-07 22:01:23 (5.73 MB/s) - ‘./pages/nytimes.com_915faaa7e7c79f05053ff4ea9d0400bbc3a47edb.html’ saved [377157/377157]
+

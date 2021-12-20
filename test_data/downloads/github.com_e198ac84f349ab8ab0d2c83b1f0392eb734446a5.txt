@@ -1,0 +1,36 @@
+--2021-12-07 22:01:28--  https://github.com/holochain/holochain-rust
+Resolving github.com (github.com)... 140.82.121.4
+Connecting to github.com (github.com)|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Server: GitHub.com
+  Date: Tue, 07 Dec 2021 21:01:28 GMT
+  Content-Type: text/html; charset=utf-8
+  Vary: X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With
+  permissions-policy: interest-cohort=()
+  ETag: W/"d36b22b7a8c85d452d1ced37aad34f13"
+  Cache-Control: max-age=0, private, must-revalidate
+  Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+  X-Frame-Options: deny
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 0
+  Referrer-Policy: no-referrer-when-downgrade
+  Expect-CT: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+  Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com online.visualstudio.com/api/v1/locations raw.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+  Set-Cookie: _gh_sess=1gP2RwPPp9LST2TcZ2lEfCtOvMCgc1xB8mPk49j0TUB5KyIst103mqf%2F1%2B7u8LMwA3lPrZstzLOJVR6QSP1MEZHmgJDeQsiSvs%2BEYRHCzTHkVAk34Jhsgr1xVK2RzjP5Ywy43LqsK%2BpTwKq31ZfqvhejGgOBJwq6weWNrXIYICjqRRCdZmu6wXj970giJDr5PawTYnBIinNZVZ75nsOs9yFoISK%2FotpzoRR%2FuPyZfy4WbMEigECq8lQRb4DbkWT1cMa0pmwjwgnhs7s7rhT9Lw%3D%3D--ADs1IWq2IuIUncqy--nRXPNiqL2GcRbyfsDQDI3g%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+  Set-Cookie: _octo=GH1.1.1812886264.1638910888; Path=/; Domain=github.com; Expires=Wed, 07 Dec 2022 21:01:28 GMT; Secure; SameSite=Lax
+  Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Wed, 07 Dec 2022 21:01:28 GMT; HttpOnly; Secure; SameSite=Lax
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  X-GitHub-Request-Id: DA22:52E6:1DE0128:1F338D6:61AFCBA8
+Length: unspecified [text/html]
+Saving to: ‘./pages/github.com_e198ac84f349ab8ab0d2c83b1f0392eb734446a5.html’
+
+     0K .......... .......... .......... .......... ..........  964K
+    50K .......... .......... .......... .......... .......... 1.82M
+   100K .......... .......... .......... .......... .......... 4.22M
+   150K .......... .......... .......... .......... .......... 4.39M
+   200K .......... .......... .......... .......... ....       3.42M=0.1s
+
+2021-12-07 22:01:29 (2.09 MB/s) - ‘./pages/github.com_e198ac84f349ab8ab0d2c83b1f0392eb734446a5.html’ saved [250164]
+

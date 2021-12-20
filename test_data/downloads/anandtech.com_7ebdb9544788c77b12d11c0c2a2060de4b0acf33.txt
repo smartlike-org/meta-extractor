@@ -1,0 +1,30 @@
+--2021-12-07 22:01:34--  https://www.anandtech.com/show/15578/cloud-clash-amazon-graviton2-arm-against-intel-and-amd
+Resolving www.anandtech.com (www.anandtech.com)... 99.86.237.24, 99.86.237.32, 99.86.237.117, ...
+Connecting to www.anandtech.com (www.anandtech.com)|99.86.237.24|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Content-Type: text/html; charset=utf-8
+  Content-Length: 86073
+  Connection: keep-alive
+  Vary: Accept-Encoding
+  Server: nginx
+  Date: Tue, 07 Dec 2021 21:01:34 GMT
+  Cache-Control: private
+  X-AspNetMvc-Version: 5.2
+  X-AspNet-Version: 4.0.30319
+  Set-Cookie: atusessionw=2c49341a-2129-492b-be47-b638062b652a; domain=.anandtech.com; expires=Wed, 01-Jan-2020 05:00:00 GMT; path=/; secure; HttpOnly
+  X-Powered-By: ASP.NET
+  X-Frame-Options: DENY
+  Strict-Transport-Security: max-age=300; includeSubDomains
+  X-Cache: Miss from cloudfront
+  Via: 1.1 96296f2b3ee1b7cbc3fb127d3383661e.cloudfront.net (CloudFront)
+  X-Amz-Cf-Pop: VIE50-C1
+  X-Amz-Cf-Id: PDNdmt22jaw61fnU57qoWev35DJEl0h6-EvePJBePIyx29AXJBuSpQ==
+Length: 86073 (84K) [text/html]
+Saving to: ‘./pages/anandtech.com_7ebdb9544788c77b12d11c0c2a2060de4b0acf33.html’
+
+     0K .......... .......... .......... .......... .......... 59%  181K 0s
+    50K .......... .......... .......... ....                 100%  243K=0.4s
+
+2021-12-07 22:01:35 (201 KB/s) - ‘./pages/anandtech.com_7ebdb9544788c77b12d11c0c2a2060de4b0acf33.html’ saved [86073/86073]
+

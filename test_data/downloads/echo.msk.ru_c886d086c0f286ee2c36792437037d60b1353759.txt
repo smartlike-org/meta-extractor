@@ -1,0 +1,20 @@
+--2021-12-07 22:01:25--  https://echo.msk.ru/blog/shenderovich/2606074-echo/
+Resolving echo.msk.ru (echo.msk.ru)... 185.71.67.2
+Connecting to echo.msk.ru (echo.msk.ru)|185.71.67.2|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Server: nginx
+  Date: Tue, 07 Dec 2021 21:01:25 GMT
+  Content-Type: text/html; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  Vary: Accept-Encoding
+Length: unspecified [text/html]
+Saving to: ‘./pages/echo.msk.ru_c886d086c0f286ee2c36792437037d60b1353759.html’
+
+     0K .......... .......... .......... .......... .......... 69.4K
+    50K .......... .......... .......... .......... .......... 67.9K
+   100K .......... ......                                      3.17M=1.5s
+
+2021-12-07 22:01:27 (79.9 KB/s) - ‘./pages/echo.msk.ru_c886d086c0f286ee2c36792437037d60b1353759.html’ saved [119529]
+

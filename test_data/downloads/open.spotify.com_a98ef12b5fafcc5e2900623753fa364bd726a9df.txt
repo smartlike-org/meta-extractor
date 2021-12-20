@@ -1,0 +1,28 @@
+--2021-12-07 22:01:44--  https://open.spotify.com/album/3ewRuYOSneUjBqbVQn45Jy
+Resolving open.spotify.com (open.spotify.com)... 35.186.224.25, 2600:1901:1:c36::
+Connecting to open.spotify.com (open.spotify.com)|35.186.224.25|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  date: Tue, 07 Dec 2021 21:01:43 GMT
+  content-type: text/html; charset=utf-8
+  Content-Length: 59879
+  vary: Accept-Encoding,Accept-Encoding,Accept-Encoding
+  spotify-request-id: 5c1a7a92-f9a9-4581-a338-e67e097534c9
+  set-cookie: sp_t=cc5a842ca547cf69a48b2e0751211078; path=/; expires=Wed, 07 Dec 2022 21:01:43 GMT; domain=.spotify.com; samesite=none; secure
+  set-cookie: sp_landing=https%3A%2F%2Fopen.spotify.com%2Falbum%2F3ewRuYOSneUjBqbVQn45Jy; path=/; expires=Wed, 08 Dec 2021 21:01:43 GMT; domain=.spotify.com; samesite=none; secure; httponly
+  x-nodejs: 1
+  x-join-the-band: https://www.spotify.com/jobs/
+  sp-trace-id: 909ba32f7124725e
+  strict-transport-security: max-age=31536000
+  x-content-type-options: nosniff
+  server: envoy
+  Via: HTTP/2 edgeproxy, 1.1 google
+  Alt-Svc: clear
+Length: 59879 (58K) [text/html]
+Saving to: ‘./pages/open.spotify.com_a98ef12b5fafcc5e2900623753fa364bd726a9df.html’
+
+     0K .......... .......... .......... .......... .......... 85% 1.87M 0s
+    50K ........                                              100% 1.93M=0.03s
+
+2021-12-07 22:01:44 (1.88 MB/s) - ‘./pages/open.spotify.com_a98ef12b5fafcc5e2900623753fa364bd726a9df.html’ saved [59879/59879]
+

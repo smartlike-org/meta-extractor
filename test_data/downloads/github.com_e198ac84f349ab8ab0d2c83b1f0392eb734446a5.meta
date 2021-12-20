@@ -1,0 +1,28 @@
+{
+    "author": "holochain#github.com",
+    "authorAvatar": "",
+    "authorDescription": "",
+    "authorHome": "",
+    "authorTitle": "holochain",
+    "confidence": 0,
+    "country": "",
+    "creator": "",
+    "description": "DEPRECATED. The Holochain framework implemented in rust with a redux style internal state-model. - GitHub - holochain/holochain-rust: DEPRECATED. The Holochain framework implemented in rust with a ...",
+    "icon": "",
+    "image": "https://opengraph.githubassets.com/aa90e5d3713a5a1f56d57dc1572a92ed8916fc5eedd1fe5427ea0f5cd65e63e6/holochain/holochain-rust",
+    "language": "en",
+    "pub_date": 0,
+    "site_name": "GitHub",
+    "status": "ok",
+    "subscriber_count": 0,
+    "tags": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "text": "Holochain-rust Travis: Circle CI: Codecov: License: This code is loosely based on the previous Golang prototype. Code Status: This Rust version is...",
+    "title": "GitHub - holochain/holochain-rust: DEPRECATED. The Holochain framework implemented in rust with a..."
+}

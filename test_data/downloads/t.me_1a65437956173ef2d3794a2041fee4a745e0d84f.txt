@@ -1,0 +1,22 @@
+--2021-12-07 22:01:40--  https://t.me/orex62/6219
+Resolving t.me (t.me)... 149.154.167.99, 2001:67c:4e8:1033:4:100:0:a, 2001:67c:4e8:1033:5:100:0:a, ...
+Connecting to t.me (t.me)|149.154.167.99|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Server: nginx/1.18.0
+  Date: Tue, 07 Dec 2021 21:01:40 GMT
+  Content-Type: text/html; charset=utf-8
+  Content-Length: 9142
+  Connection: keep-alive
+  Set-Cookie: stel_ssid=2e15bc5a17688293c1_8647384733805541258; expires=Wed, 08 Dec 2021 21:01:40 GMT; path=/; samesite=None; secure; HttpOnly
+  Pragma: no-cache
+  Cache-control: no-store
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=35768000
+Length: 9142 (8.9K) [text/html]
+Saving to: ‘./pages/t.me_1a65437956173ef2d3794a2041fee4a745e0d84f.html’
+
+     0K ........                                              100% 39.5M=0s
+
+2021-12-07 22:01:41 (39.5 MB/s) - ‘./pages/t.me_1a65437956173ef2d3794a2041fee4a745e0d84f.html’ saved [9142/9142]
+
